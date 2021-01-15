@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c427471e34da6e4495b043e1d52eb3e, type: 3}
   m_Name: Item2
   m_EditorClassIdentifier: 
-  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: 21300000, guid: 35830f913b78f6241aba9c60402514f1, type: 3}
   Category: 1
-  Name: this is oo
+  Name: That iten
   Description: it is that item

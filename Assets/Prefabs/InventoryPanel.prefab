@@ -126,7 +126,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 1880, y: -110}
-  m_SizeDelta: {x: 592, y: 790}
+  m_SizeDelta: {x: 451.4, y: 790}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &8864737802673522350
 CanvasRenderer:
@@ -149,14 +149,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: c94aadeb24e77f74a9dbd97539858629, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -277,6 +277,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3764893258711943453, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dc9eb8f9a35fe2c4d98846d1c717bd6b,
+        type: 3}
     - target: {fileID: 5658088668004699801, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
         type: 3}
       propertyPath: _scrollView
@@ -432,6 +438,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3764893258711943453, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ba730fe8d6c536c468f17f45082806a2,
+        type: 3}
     - target: {fileID: 5658088668004699801, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
         type: 3}
       propertyPath: _scrollView
@@ -974,6 +986,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3764893258711943453, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eaef3eb2fe442c446bac17a997b7046e,
+        type: 3}
     - target: {fileID: 5658088668004699801, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
         type: 3}
       propertyPath: _scrollView
@@ -1114,6 +1132,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3764893258711943453, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1b91e7811a49eee4da1bc8abf0fd33bc,
+        type: 3}
     - target: {fileID: 5658088668004699801, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
         type: 3}
       propertyPath: _scrollView
@@ -1541,6 +1565,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3764893258711943453, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 083028938a1da334396bd877f33de6a1,
+        type: 3}
     - target: {fileID: 5658088668004699801, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
         type: 3}
       propertyPath: _scrollView
@@ -1948,6 +1978,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3764893258711943453, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f9976833a02fa7d46bdfcf3e7ef0f193,
+        type: 3}
     - target: {fileID: 5658088668004699801, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
         type: 3}
       propertyPath: _scrollView
@@ -3156,6 +3192,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3764893258711943453, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 400721b4a0c5cf1428319246bb477c91,
+        type: 3}
     - target: {fileID: 5658088668004699801, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
         type: 3}
       propertyPath: _scrollView
