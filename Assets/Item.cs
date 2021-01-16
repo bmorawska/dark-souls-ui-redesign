@@ -8,4 +8,6 @@ public class Item : ScriptableObject
     public Category Category;
     public string Name;
     public string Description;
+    public float Weight;
+    public int Count;
 }

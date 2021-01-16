@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public enum Category
 {
     C1,
-    C2,
+    Weapons,
     C3,
     C4, 
     C5,

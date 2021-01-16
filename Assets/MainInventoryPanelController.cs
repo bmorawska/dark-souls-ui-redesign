@@ -56,6 +56,7 @@ public class MainInventoryPanelController : MonoBehaviour
                 if (categoryPanel.items == null)
                     categoryPanel.items = new List<Item>();
                 categoryPanel.items.AddRange(categoryItems);
+                categoryPanel.GenerateItems();
             }
         }
     }
