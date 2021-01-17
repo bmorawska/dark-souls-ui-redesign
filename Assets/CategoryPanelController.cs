@@ -6,14 +6,19 @@ using UnityEngine.Serialization;
 
 public class CategoryPanelController : MonoBehaviour
 {
-    [FormerlySerializedAs("_items")] public List<Item> items;
+    private List<Item> _items = new List<Item>();
     [SerializeField] private GameObject _inventoryItemPrefab;
     [SerializeField] private Transform _content;
-    public void GenerateItems()
+
+    public virtual void AddItem(Item item)
     {
-        for (var i = 0; i < items.Count; i++)
+        _items.Add(item);
+    }
+    public virtual void GenerateItems()
+    {
+        for (var i = 0; i < _items.Count; i++)
         {
-            Item item = items[i];
+            Item item = _items[i];
             GameObject inventoryItem = Instantiate(_inventoryItemPrefab, _content);
             RectTransform inventoryItemTransform = inventoryItem.GetComponent<RectTransform>();
             inventoryItemTransform.localPosition = new Vector3(0, (i + 1) * inventoryItemTransform.rect.height * -1, 0);

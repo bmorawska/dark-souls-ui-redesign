@@ -53,9 +53,13 @@ public class MainInventoryPanelController : MonoBehaviour
             foreach (CategoryController categoryObj in allCategoryControllers.Where(c => c.category == category))
             {
                 CategoryPanelController categoryPanel = categoryObj.CategoryPanel;
-                if (categoryPanel.items == null)
-                    categoryPanel.items = new List<Item>();
-                categoryPanel.items.AddRange(categoryItems);
+                // if (categoryPanel.items == null)
+                //     categoryPanel.items = new List<Item>();
+                foreach (Item item in categoryItems)
+                {
+                    categoryPanel.AddItem(item);
+                }
+                //categoryPanel.items.AddRange(categoryItems);
                 categoryPanel.GenerateItems();
             }
         }
