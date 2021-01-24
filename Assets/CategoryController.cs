@@ -19,8 +19,8 @@ public enum Category
 
 public class CategoryController : MonoBehaviour
 {
-    private static CategoryController _previousCategory = null;
-    
+    private static CategoryController _currentCategory = null;
+    public static CategoryController CurrentCategory => _currentCategory;
 
     [SerializeField] private Category _category;
     [SerializeField] private CategoryPanelController _categoryPanel;
@@ -47,11 +47,11 @@ public class CategoryController : MonoBehaviour
 
     public void SelectCategory()
     {
-        _previousCategory?.HideCategory();
+        _currentCategory?.HideCategory();
         _categoryPanel.gameObject.SetActive(true);
         transform.localScale = Vector3.one * 1.3f;
         _image.sprite = SelectedCategorySprite;
-        _previousCategory = this;
+        _currentCategory = this;
         _categoryPanel.GetComponentInChildren<Selectable>().Select();
     }
 
