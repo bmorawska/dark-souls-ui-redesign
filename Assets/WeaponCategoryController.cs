@@ -20,6 +20,7 @@ public class WeaponCategoryController : MonoBehaviour
 
     public WeaponCategory category => _category;
     private Image _image;
+    private RectTransform _rectTransform;
     private void Start()
     {
         AssignImageComponent();
@@ -27,6 +28,7 @@ public class WeaponCategoryController : MonoBehaviour
 
     public void AssignImageComponent()
     {
+        _rectTransform = GetComponent<RectTransform>();
         _image = GetComponent<Image>();
         if (CategorySprite != null)
             _image.sprite = CategorySprite;
@@ -37,8 +39,10 @@ public class WeaponCategoryController : MonoBehaviour
     public void SelectCategory()
     {
         _previousCategory?.HideCategory();
+        // GetComponent<Image>().
         _categoryPanel.gameObject.SetActive(true);
-        transform.localScale = Vector3.one * 1.3f;
+        //transform.localScale = Vector3.one * 1.3f;
+        _rectTransform.sizeDelta = Vector2.one * 110;
         _image.sprite = SelectedCategorySprite;
         _previousCategory = this;
         _categoryPanel.GetComponentInChildren<Selectable>().Select();
@@ -46,6 +50,7 @@ public class WeaponCategoryController : MonoBehaviour
 
     public void HideCategory()
     {
+        _rectTransform.sizeDelta = Vector2.one * 91;
         _image.sprite = CategorySprite;
         transform.localScale = Vector3.one;
         _categoryPanel.gameObject.SetActive(false);

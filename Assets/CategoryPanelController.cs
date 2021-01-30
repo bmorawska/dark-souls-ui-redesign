@@ -32,6 +32,9 @@ public class CategoryPanelController : MonoBehaviour
             ic.Item = item;
             _spawnedItems.Add(ic);
         }
+
+        var rectTransform = _content.GetComponent<RectTransform>();
+        rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, _itemPanelHeight * _spawnedItems.Count);
     }
 
     public virtual void SortItems()
