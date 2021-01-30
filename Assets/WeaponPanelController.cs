@@ -13,7 +13,7 @@ public class WeaponPanelController : CategoryPanelController
     [SerializeField] private CategoryPanelController _w3;
     [SerializeField] private CategoryPanelController _w4;
     [SerializeField] private CategoryPanelController _w5;
-    [SerializeField] private WeaponCategoryController _defaultCategory;
+    [SerializeField] private SubcategoryController _defaultCategory;
     private void Start()
     {
         _defaultCategory.AssignImageComponent();

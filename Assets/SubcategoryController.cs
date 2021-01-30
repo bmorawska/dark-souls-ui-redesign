@@ -6,21 +6,25 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class WeaponCategoryController : MonoBehaviour
+public class SubcategoryController : MonoBehaviour
 {
-    private static WeaponCategoryController _previousCategory = null;
+    public static SubcategoryController _activeCategory = null;
     
 
-    [SerializeField] private WeaponCategory _category;
+    //[SerializeField] private WeaponCategory _category;
     [SerializeField] private CategoryPanelController _categoryPanel;
     [SerializeField] private Sprite CategorySprite;
     [SerializeField] private Sprite SelectedCategorySprite;
 
     public CategoryPanelController CategoryPanel => _categoryPanel;
 
-    public WeaponCategory category => _category;
+    //public WeaponCategory category => _category;
     private Image _image;
     private RectTransform _rectTransform;
+
+    public SubcategoryController _nextCategory;
+    public SubcategoryController _previousCategory;
+
     private void Start()
     {
         AssignImageComponent();
@@ -38,14 +42,14 @@ public class WeaponCategoryController : MonoBehaviour
 
     public void SelectCategory()
     {
-        _previousCategory?.HideCategory();
+        _activeCategory?.HideCategory();
+        _activeCategory = this;
         // GetComponent<Image>().
         _categoryPanel.gameObject.SetActive(true);
+        _categoryPanel.GetComponentInChildren<Selectable>()?.Select();
         //transform.localScale = Vector3.one * 1.3f;
         _rectTransform.sizeDelta = Vector2.one * 110;
         _image.sprite = SelectedCategorySprite;
-        _previousCategory = this;
-        _categoryPanel.GetComponentInChildren<Selectable>().Select();
     }
 
     public void HideCategory()

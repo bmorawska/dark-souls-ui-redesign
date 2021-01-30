@@ -12,7 +12,8 @@ public class OneScriptToRuleThemAllGUI : Editor
         if (GUILayout.Button("Rule"))
         {
             OneScriptToRuleThemAll script = (OneScriptToRuleThemAll) target;
-            script.SetAllScrollsValues();
+            //script.SetAllScrollsValues();
+            //script.AddSelectableAddonComponent();
         }
     }
 }

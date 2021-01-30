@@ -23,6 +23,12 @@ public class InventoryItemController : MonoBehaviour
         assigment?.AssignItem(Item);
     }
 
+    
+    private void OnEnable()
+    {
+        ChangeChildrenTextColorDefault();
+    }
+
     public void SelectItem()
     {
         WearableController.ChangingItem?.SetItem(Item.icon);

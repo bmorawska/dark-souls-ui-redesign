@@ -27,14 +27,16 @@ public class CategoryPanelController : MonoBehaviour
             Item item = _items[i];
             GameObject inventoryItem = Instantiate(_inventoryItemPrefab, _content);
             RectTransform inventoryItemTransform = inventoryItem.GetComponent<RectTransform>();
-            inventoryItemTransform.localPosition = new Vector3(0, (i + 1) * _itemPanelHeight * -1, 0);
+            inventoryItemTransform.localPosition = new Vector3(0, (i) * _itemPanelHeight * -1, 0);
             InventoryItemController ic = inventoryItem.GetComponent<InventoryItemController>();
             ic.Item = item;
             _spawnedItems.Add(ic);
         }
 
+        print(gameObject.name);
         var rectTransform = _content.GetComponent<RectTransform>();
-        rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, _itemPanelHeight * _spawnedItems.Count);
+        rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x,
+            _itemPanelHeight * (_spawnedItems.Count == 0 ? 1 : _spawnedItems.Count));
     }
 
     public virtual void SortItems()
