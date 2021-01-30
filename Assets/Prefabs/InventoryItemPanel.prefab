@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79ffec9794612a047998035af6869f18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _parentPanel: {fileID: 0}
   _defaultColor: {r: 0.94117653, g: 0.8313726, b: 0.5647059, a: 1}
   _itemNameObject: {fileID: 8590695659684447011}
   _itemIcon: {fileID: 434780112489904090}
@@ -242,7 +243,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1736042903}
-          m_MethodName: SelectItem
+          m_MethodName: ChooseItem
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -272,7 +273,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1736042903}
-          m_MethodName: ChangeChildrenTextColorBlack
+          m_MethodName: SelectItem
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -309,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed689f3bc02b0f14e922b861781050fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsItem: 1
+  elementType: 1
 --- !u!1 &9202269479289224467
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class CategoryPanelController : MonoBehaviour
 {
@@ -13,10 +14,19 @@ public class CategoryPanelController : MonoBehaviour
     private float _itemPanelHeight;
     [SerializeField] private GameObject _inventoryItemPrefab;
     [SerializeField] private Transform _content;
+    public GameObject LastSelectedItem = null;
 
     public virtual void AddItem(Item item)
     {
         _items.Add(item);
+    }
+
+    public void ReselectItem()
+    {
+        if(LastSelectedItem != null)
+            LastSelectedItem.GetComponent<Selectable>().Select();
+        else
+            GetComponentInChildren<Selectable>()?.Select();
     }
     public virtual void GenerateItems()
     {
@@ -30,6 +40,7 @@ public class CategoryPanelController : MonoBehaviour
             inventoryItemTransform.localPosition = new Vector3(0, (i) * _itemPanelHeight * -1, 0);
             InventoryItemController ic = inventoryItem.GetComponent<InventoryItemController>();
             ic.Item = item;
+            ic._parentPanel = this;
             _spawnedItems.Add(ic);
         }
 
@@ -41,6 +52,7 @@ public class CategoryPanelController : MonoBehaviour
 
     public virtual void SortItems()
     {
+        if(_spawnedItems.Count == 0) return;
         ArrangeItems(_spawnedItems.OrderBy(i => Sorter(i.Item)).ToList());
     }
 
@@ -48,7 +60,7 @@ public class CategoryPanelController : MonoBehaviour
     {
         for (int i = 0; i < items.Count; i++)
         {
-            items[i].transform.localPosition = new Vector3(0, (i + 1) * _itemPanelHeight * -1, 0);
+            items[i].transform.localPosition = new Vector3(0, (i) * _itemPanelHeight * -1, 0);
         }
     }
 }

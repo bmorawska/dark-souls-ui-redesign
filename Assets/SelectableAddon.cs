@@ -7,13 +7,19 @@ using UnityEngine.UI;
 
 public class SelectableAddon : MonoBehaviour, ISelectHandler
 {
+    public enum SelectionType
+    {
+        Default,
+        Item,
+        MainCategory
+    }
     static public SelectableAddon CurrentSelected = null;
-    static public bool IsItemSelected = false;
-    public bool IsItem = false;
+    static public SelectionType CurrentType = SelectionType.Default;
+    public SelectionType elementType = SelectionType.Default;
 
     public void OnSelect(BaseEventData eventData)
     {
         CurrentSelected = this;
-        IsItemSelected = IsItem;
+        CurrentType = elementType;
     }
 }

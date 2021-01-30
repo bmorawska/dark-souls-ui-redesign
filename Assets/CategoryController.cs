@@ -26,6 +26,8 @@ public class CategoryController : MonoBehaviour
     [SerializeField] private CategoryPanelController _categoryPanel;
     [SerializeField] private Sprite CategorySprite;
     [SerializeField] private Sprite SelectedCategorySprite;
+    public CategoryController CategoryUppon;
+    public CategoryController CategoryBelow;
     public bool IsActive { get; protected set; } = false;
 
     public CategoryPanelController CategoryPanel => _categoryPanel;
@@ -53,7 +55,7 @@ public class CategoryController : MonoBehaviour
         transform.localScale = Vector3.one * 1.3f;
         _image.sprite = SelectedCategorySprite;
         _currentCategory = this;
-        _categoryPanel.GetComponentInChildren<Selectable>().Select();
+        //_categoryPanel.ReselectItem();
         IsActive = true;
     }
 

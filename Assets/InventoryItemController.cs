@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class InventoryItemController : MonoBehaviour
 {
+    public CategoryPanelController _parentPanel;
     [SerializeField] private Color _defaultColor;
     //[SerializeField] private Image _itemImage;
     [SerializeField] private TextMeshProUGUI _itemNameObject;
@@ -29,11 +30,17 @@ public class InventoryItemController : MonoBehaviour
         ChangeChildrenTextColorDefault();
     }
 
-    public void SelectItem()
+    public void ChooseItem()
     {
         WearableController.ChangingItem?.SetItem(Item.icon);
     }
 
+    public void SelectItem()
+    {
+        ChangeChildrenTextColorBlack();
+        _parentPanel.LastSelectedItem = gameObject;
+    }
+    
     public void ChangeChildrenTextColorBlack()
     {
         foreach (TextMeshProUGUI text in GetComponentsInChildren<TextMeshProUGUI>())

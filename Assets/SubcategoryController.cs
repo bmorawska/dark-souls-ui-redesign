@@ -25,6 +25,7 @@ public class SubcategoryController : MonoBehaviour
     public SubcategoryController _nextCategory;
     public SubcategoryController _previousCategory;
 
+
     private void Start()
     {
         AssignImageComponent();
@@ -46,7 +47,7 @@ public class SubcategoryController : MonoBehaviour
         _activeCategory = this;
         // GetComponent<Image>().
         _categoryPanel.gameObject.SetActive(true);
-        _categoryPanel.GetComponentInChildren<Selectable>()?.Select();
+        _categoryPanel.ReselectItem();
         //transform.localScale = Vector3.one * 1.3f;
         _rectTransform.sizeDelta = Vector2.one * 110;
         _image.sprite = SelectedCategorySprite;
