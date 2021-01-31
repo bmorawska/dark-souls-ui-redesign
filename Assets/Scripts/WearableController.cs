@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -11,11 +12,22 @@ public class WearableController : MonoBehaviour
     [SerializeField] private Category _category;
     [SerializeField] private Image _itemIcon;
     [SerializeField] private Sprite _blankSprite;
+    [SerializeField] private Sprite _slotBeeingSelected;
     public Item item = null;
     public InventoryItemController uiItem = null;
+    private Sprite _defaultSprite;
+    private Image _image;
+
+    private void Start()
+    {
+        _image = GetComponent<Image>();
+        _defaultSprite = _image.sprite;
+    }
+
     public void SelectSlot()
     {
         ChangingItem = this;
+        _image.sprite = _slotBeeingSelected;
         var allCategories = FindObjectsOfType<CategoryController>();
         foreach (var categorySlot in allCategories)
         {
@@ -30,6 +42,8 @@ public class WearableController : MonoBehaviour
         {
             wearableController.GetComponent<Selectable>().interactable = false;
         }
+        var selectable = GetComponent<Selectable>();
+        selectable.interactable = true;
     }
 
     public void SetItem(Item newItem, InventoryItemController newUiItem)
@@ -52,6 +66,8 @@ public class WearableController : MonoBehaviour
             uiItem.SetNotInUse();
         uiItem = newUiItem;
         newUiItem.SetInUse();
+        //_defaultSprite = image.sprite;
+        _image.sprite = _defaultSprite;
     }
 
     public void ClearItem()

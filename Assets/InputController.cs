@@ -10,15 +10,34 @@ public class InputController : MonoBehaviour
     [SerializeField] private DescriptionPanelController _descriptionPanel;
     [SerializeField] private GameObject _sortPanel;
     [SerializeField] private Button _sortButton;
-    void Update()
+    public void OpenDescriptionPanel()
     {
-        if(Input.GetKeyDown(KeyCode.I) && WearableController.ChangingItem != null && SelectableAddon.CurrentType == SelectableAddon.SelectionType.Item)
+        if (WearableController.ChangingItem != null &&
+            SelectableAddon.CurrentType == SelectableAddon.SelectionType.Item)
         {
             _descriptionPanel.gameObject.SetActive(true);
             _descriptionPanel.SetAllValues(
                 (WeaponItem) SelectableAddon.CurrentSelected.GetComponent<InventoryItemController>().Item,
                 (WeaponItem) WearableController.ChangingItem.item);
-            //set values
+        }
+    }
+
+    public void ClearSelectedWearableItem()
+    {
+        if (SelectableAddon.CurrentType == SelectableAddon.SelectionType.WearableItem)
+        {
+            SelectableAddon.CurrentSelected.GetComponent<WearableController>().ClearItem();
+        }
+    }
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            OpenDescriptionPanel();
+        }
+        if(Input.GetKeyDown(KeyCode.H))
+        {
+            ClearSelectedWearableItem();
         }
 
         if (Input.GetKeyDown(KeyCode.Q) && _sortButton.interactable)
