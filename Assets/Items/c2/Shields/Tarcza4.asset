@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4b986837c6a324cb6a739ff7bdfd52, type: 3}
   m_Name: Tarcza4
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: a510d9daa61983c43b7791055bb2b268, type: 3}
+  icon: {fileID: 21300000, guid: 311ff3e04d6a7dc46bae66646c760914, type: 3}
   Category: 1
   Name: Tarcza wikinga
   Description: "Niby skrytozab\xF3jcy a jak przychodz\u0105 tr\u0105bi\u0105 na ca\u0142e

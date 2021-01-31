@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4b986837c6a324cb6a739ff7bdfd52, type: 3}
   m_Name: Miecz2
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: d31aa8412a4d374458c912d11686642a, type: 3}
+  icon: {fileID: 21300000, guid: e208c00fa82059d4da6f67e95ac077f0, type: 3}
   Category: 1
   Name: "Miecz Mongo\u0142a"
   Description: Miecz z dalekiej Azji... w innym uniwersum.
