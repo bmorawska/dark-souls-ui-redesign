@@ -17,7 +17,7 @@ MonoBehaviour:
   Name: "S\u0142oneczny he\u0142m"
   Description: "Lepiej wygl\u0105da w cieniu."
   Weight: 2
-  Count: 2
+  Count: 1
   ArmorCategory: 0
   AttackDefence: 75
   BoltDefence: 0

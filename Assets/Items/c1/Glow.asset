@@ -17,7 +17,7 @@ MonoBehaviour:
   Name: "Magiczne r\u0119kawiczki"
   Description: "Mo\u017Ce nale\u017Ca\u0142y kiedy\u015B do maga?"
   Weight: 1
-  Count: 1
+  Count: 2
   ArmorCategory: 2
   AttackDefence: 5
   BoltDefence: 0

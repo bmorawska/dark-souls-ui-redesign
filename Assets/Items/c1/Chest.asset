@@ -17,7 +17,7 @@ MonoBehaviour:
   Name: Bluza
   Description: "S\u0142abo, ale gorzej nie b\u0119dzie."
   Weight: 3
-  Count: 0
+  Count: 1
   ArmorCategory: 1
   AttackDefence: 10
   BoltDefence: 0

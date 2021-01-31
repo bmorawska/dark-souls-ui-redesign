@@ -17,7 +17,7 @@ MonoBehaviour:
   Name: Maska cienia
   Description: +2 do cienia
   Weight: 1
-  Count: 2
+  Count: 1
   ArmorCategory: 0
   AttackDefence: 10
   BoltDefence: 0

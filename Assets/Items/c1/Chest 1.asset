@@ -17,7 +17,7 @@ MonoBehaviour:
   Name: "Napier\u015Bnik p\u0142ytowy"
   Description: "Silny i wytrzyma\u0142y."
   Weight: 7
-  Count: 0
+  Count: 1
   ArmorCategory: 1
   AttackDefence: 200
   BoltDefence: 0

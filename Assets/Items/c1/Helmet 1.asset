@@ -17,7 +17,7 @@ MonoBehaviour:
   Name: "Kolczasty he\u0142m"
   Description: "Jest he\u0142mem, ma kolce, \u017Cyj z tym."
   Weight: 2
-  Count: 2
+  Count: 1
   ArmorCategory: 0
   AttackDefence: 30
   BoltDefence: 0

@@ -17,7 +17,7 @@ MonoBehaviour:
   Name: Pas z butem
   Description: Drugiego buta nie ma w zestawie.
   Weight: 1
-  Count: 1
+  Count: 2
   ArmorCategory: 3
   AttackDefence: 5
   BoltDefence: 0
