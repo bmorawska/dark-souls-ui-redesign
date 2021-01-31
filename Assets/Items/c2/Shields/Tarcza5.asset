@@ -19,8 +19,28 @@ MonoBehaviour:
   Weight: 2.5
   Count: 1
   WeaponCategory: 2
+  AttackType: 0
   Attack: 92
   Bolt: 0
   Durability: 50
   Fire: 0
   Magic: 0
+  Critical: 0
+  AttackFromBonus: 0
+  MagicFromBonus: 0
+  FireFromBonus: 0
+  BoltFromBonus: 0
+  CriticalFromBonus: 0
+  StrengthBonus: 0
+  AgilityBonus: 0
+  IntelligenceBonus: 0
+  FaithBonus: 0
+  AttackReduction: 75
+  MagicReduction: 40
+  FireReduction: 36
+  LightningReduction: 52
+  Stability: 43
+  StrengthRequirement: 0
+  AgilityRequirement: 0
+  IntelligenceRequirement: 0
+  FaithRequirement: 0
