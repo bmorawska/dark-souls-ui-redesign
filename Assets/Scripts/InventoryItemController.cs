@@ -45,7 +45,7 @@ public class InventoryItemController : MonoBehaviour
 
     public void ChooseItem()
     {
-        WearableController.ChangingItem?.SetItem(Item.icon);
+        WearableController.ChangingItem?.SetItem(Item);
     }
 
     public void SelectItem()

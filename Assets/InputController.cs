@@ -12,9 +12,12 @@ public class InputController : MonoBehaviour
     [SerializeField] private Button _sortButton;
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.I) && SelectableAddon.CurrentType == SelectableAddon.SelectionType.Item)
+        if(Input.GetKeyDown(KeyCode.I) && WearableController.ChangingItem != null && SelectableAddon.CurrentType == SelectableAddon.SelectionType.Item)
         {
             _descriptionPanel.gameObject.SetActive(true);
+            _descriptionPanel.SetAllValues(
+                (WeaponItem) SelectableAddon.CurrentSelected.GetComponent<InventoryItemController>().Item,
+                (WeaponItem) WearableController.ChangingItem.item);
             //set values
         }
 

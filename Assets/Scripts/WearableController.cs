@@ -10,7 +10,7 @@ public class WearableController : MonoBehaviour
 
     [SerializeField] private Category _category;
     [SerializeField] private Image _itemIcon;
-
+    public Item item;
     public void SelectSlot()
     {
         ChangingItem = this;
@@ -30,8 +30,10 @@ public class WearableController : MonoBehaviour
         }
     }
 
-    public void SetItem(Sprite sprite)
+    public void SetItem(Item newItem)
     {
+        item = newItem;
+        Sprite sprite = newItem.icon;
         foreach (WearableController wearableController in FindObjectsOfType<WearableController>())
         {
             wearableController.GetComponent<Selectable>().interactable = true;
@@ -43,5 +45,6 @@ public class WearableController : MonoBehaviour
         _itemIcon.sprite = sprite;
         GetComponent<Selectable>().Select();
         ChangingItem = null;
+        FindObjectOfType<WeightBarController>().UpdateBar();
     }
 }
