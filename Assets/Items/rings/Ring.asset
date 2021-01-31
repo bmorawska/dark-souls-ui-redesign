@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c427471e34da6e4495b043e1d52eb3e, type: 3}
+  m_Name: Ring
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 2a49f80ea2335354d803938c1d35b31b, type: 3}
+  Category: 6
+  Name: "Pier\u015Bcien z per\u0142\u0105"
+  Description: "Wydzielina ma\u0142\u017Ca nie brzmi wcale tak pi\u0119knie."
+  Weight: 0
+  Count: 0
