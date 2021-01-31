@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4b986837c6a324cb6a739ff7bdfd52, type: 3}
   m_Name: Tarcza3
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: e71b553516ead73468e33f15860dbd38, type: 3}
+  icon: {fileID: 21300000, guid: c45bc8b96377b3e40b2835994d7b4c7a, type: 3}
   Category: 1
   Name: Tarcza templariusza
-  Description: "U\u017Cywana przez wielkich rycerzy zakonu Feniksa."
+  Description: "U\u017Cywana przez wielkich rycerzy zakonu S\u0142o\u0144ca."
   Weight: 2.5
   Count: 1
   WeaponCategory: 2

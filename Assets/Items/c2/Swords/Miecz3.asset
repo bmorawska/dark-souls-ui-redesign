@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4b986837c6a324cb6a739ff7bdfd52, type: 3}
   m_Name: Miecz3
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: da3489a989b315644b2918cb9df15709, type: 3}
+  icon: {fileID: 21300000, guid: b0b4d3058d3d88a4cbc0cd1783764bdb, type: 3}
   Category: 1
   Name: Miecz templariusza
   Description: "U\u017Cywany przez wielkich rycerzy zakonu Feniksa."

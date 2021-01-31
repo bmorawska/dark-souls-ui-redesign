@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f4b986837c6a324cb6a739ff7bdfd52, type: 3}
-  m_Name: Spear
+  m_Name: Spear 3
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 59ffa863b5b8bba4fb8396474eb22e17, type: 3}
+  icon: {fileID: 21300000, guid: 5ba9a79226a4e87419365098ddca065b, type: 3}
   Category: 1
-  Name: "Zepsuta w\u0142\xF3cznia"
-  Description: "To by\u0142a dobra bro\u0144."
+  Name: "W\u0142\xF3cznia zab\xF3jcy smok\xF3w"
+  Description: "Smoki bardzo nie lubi\u0105, kiedy si\u0119 je tym d\u017Aga."
   Weight: 1
   Count: 1
   WeaponCategory: 4
-  Attack: 30
+  Attack: 40
   Bolt: 0
   Durability: 100
   Fire: 0
-  Magic: 0
+  Magic: 50

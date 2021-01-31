@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4b986837c6a324cb6a739ff7bdfd52, type: 3}
   m_Name: Miecz1
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 4b5c3887b0bad8548a4414947f05a7ba, type: 3}
+  icon: {fileID: 21300000, guid: f942970c5ac04e746b4e1944abe1fe19, type: 3}
   Category: 1
   Name: "Miecz Jagie\u0142\u0142y"
   Description: "Miecz s\u0142awnego kr\xF3la."

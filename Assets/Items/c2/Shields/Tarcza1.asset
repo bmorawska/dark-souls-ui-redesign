@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4b986837c6a324cb6a739ff7bdfd52, type: 3}
   m_Name: Tarcza1
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: bcc42d03d8437004dadb8fe1ece20797, type: 3}
+  icon: {fileID: 21300000, guid: c83a6079d44f88542b86bf061095893c, type: 3}
   Category: 1
   Name: "Tarcza Jagie\u0142\u0142y"
   Description: "Tarcza s\u0142awnego kr\xF3la."
