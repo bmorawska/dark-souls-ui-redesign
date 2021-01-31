@@ -7,11 +7,13 @@ using UnityEngine.UI;
 
 public class SelectableAddon : MonoBehaviour, ISelectHandler, IDeselectHandler, IPointerClickHandler
 {
+    public static SelectableAddon LastSelectedWearableItem = null; 
     public enum SelectionType
     {
         Default,
         Item,
-        MainCategory
+        MainCategory,
+        WearableItem
     }
     static public SelectableAddon CurrentSelected = null;
     static public SelectionType CurrentType = SelectionType.Default;
@@ -31,6 +33,8 @@ public class SelectableAddon : MonoBehaviour, ISelectHandler, IDeselectHandler, 
         //print("selected");
         CurrentSelected = this;
         CurrentType = elementType;
+        if (elementType == SelectionType.WearableItem)
+            LastSelectedWearableItem = this;
     }
 
     // private void Update()

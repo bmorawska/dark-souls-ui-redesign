@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -71,9 +72,21 @@ public class InputController : MonoBehaviour
                     //print("Went to item on right");
                     CategoryController.CurrentCategory.CategoryPanel.ReselectItem();
                 }
+                if (Input.GetKeyDown(KeyCode.A) 
+                    || Input.GetKeyDown(KeyCode.LeftArrow))
+                {
+                    //print("Went to item on right");
+                    if (WearableController.ChangingItem == null)
+                    {
+                        if (SelectableAddon.LastSelectedWearableItem != null)
+                            SelectableAddon.LastSelectedWearableItem.GetComponent<Selectable>().Select();
+                        else
+                            FindObjectsOfType<SelectableAddon>()
+                                .First(s => s.elementType == SelectableAddon.SelectionType.WearableItem)
+                                .GetComponent<Selectable>().Select();
+                    }
+                }
                 break;
-            default:
-                throw new ArgumentOutOfRangeException();
         }
             
     }
