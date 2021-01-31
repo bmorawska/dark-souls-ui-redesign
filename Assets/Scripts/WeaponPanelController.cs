@@ -17,7 +17,7 @@ public class WeaponPanelController : CategoryPanelController
     {
         _defaultCategory.AssignImageComponent();
         _defaultCategory.SelectCategory();
-        Sorter = (item) => 0;
+        Sorter = (item, dir) => 0;
     }
 
 
@@ -57,11 +57,11 @@ public class WeaponPanelController : CategoryPanelController
 
     public override void SortItems()
     {
-        _w1.ArrangeItems(_w1._spawnedItems.OrderBy(i => Sorter(i.Item)).ToList());
-        _w2.ArrangeItems(_w2._spawnedItems.OrderBy(i => Sorter(i.Item)).ToList());
-        _w3.ArrangeItems(_w3._spawnedItems.OrderBy(i => Sorter(i.Item)).ToList());
-        _w4.ArrangeItems(_w4._spawnedItems.OrderBy(i => Sorter(i.Item)).ToList());
-        _w5.ArrangeItems(_w5._spawnedItems.OrderBy(i => Sorter(i.Item)).ToList());
+        _w1.ArrangeItems(_w1._spawnedItems.OrderBy(i => Sorter(i.Item, SortDirection)).ToList());
+        _w2.ArrangeItems(_w2._spawnedItems.OrderBy(i => Sorter(i.Item, SortDirection)).ToList());
+        _w3.ArrangeItems(_w3._spawnedItems.OrderBy(i => Sorter(i.Item, SortDirection)).ToList());
+        _w4.ArrangeItems(_w4._spawnedItems.OrderBy(i => Sorter(i.Item, SortDirection)).ToList());
+        _w5.ArrangeItems(_w5._spawnedItems.OrderBy(i => Sorter(i.Item, SortDirection)).ToList());
     }
 
     public override void ReselectItem()

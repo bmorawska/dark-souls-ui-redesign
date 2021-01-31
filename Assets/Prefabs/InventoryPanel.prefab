@@ -6124,7 +6124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d425e612bd2c44eb89395f3c94271a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LastSubcategory: {fileID: 0}
+  LastSubcategory: {fileID: 2216568539242238055}
   _spawnedItems: []
   _inventoryItemPrefab: {fileID: 0}
   _content: {fileID: 0}
@@ -6133,6 +6133,10 @@ MonoBehaviour:
   _w2: {fileID: 3879456719924200209}
   _w3: {fileID: 1550711996095865588}
   _w4: {fileID: 4700132371887434093}
+  _w1Icon: {fileID: 2216568539242238055}
+  _w2Icon: {fileID: 1504302364555485406}
+  _w3Icon: {fileID: 1779962360125971766}
+  _w4Icon: {fileID: 7643757462469243901}
   _defaultCategory: {fileID: 2216568539242238055}
 --- !u!1 &6325309021017771998
 GameObject:

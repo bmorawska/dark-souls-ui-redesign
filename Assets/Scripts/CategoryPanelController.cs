@@ -9,7 +9,8 @@ using UnityEngine.UI;
 public class CategoryPanelController : MonoBehaviour
 {
     public SubcategoryController LastSubcategory;
-    public Func<Item, float> Sorter;
+    public Func<Item, int, float> Sorter;
+    public int SortDirection = 1;
     private List<Item> _items = new List<Item>();
     public List<InventoryItemController> _spawnedItems;
     private float _itemPanelHeight;
@@ -53,7 +54,7 @@ public class CategoryPanelController : MonoBehaviour
     public virtual void SortItems()
     {
         if(_spawnedItems.Count == 0) return;
-        ArrangeItems(_spawnedItems.OrderBy(i => Sorter(i.Item)).ToList());
+        ArrangeItems(_spawnedItems.OrderBy(i => Sorter(i.Item, SortDirection)).ToList());
     }
 
     public void ArrangeItems(List<InventoryItemController> items)
