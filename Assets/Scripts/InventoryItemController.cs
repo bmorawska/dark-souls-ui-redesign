@@ -19,7 +19,11 @@ public class InventoryItemController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _descriptionText = null;
     [SerializeField] private GameObject _defaultIcons = null;
     [SerializeField] private GameObject _selectedIcons = null;
-    
+    [SerializeField] private Sprite _inUseSpriteSelected;
+    [SerializeField] private Sprite _inUseSpriteNotSelected;
+    [SerializeField] private Sprite _notInUseSpriteSelected;
+    [SerializeField] private Sprite _notInUseSpriteNotSelected;
+    private bool _isInUse = false;
     public Item Item { get; set; }
 
     private void Start()
@@ -45,7 +49,7 @@ public class InventoryItemController : MonoBehaviour
 
     public void ChooseItem()
     {
-        WearableController.ChangingItem?.SetItem(Item);
+        WearableController.ChangingItem?.SetItem(Item, this);
     }
 
     public void SelectItem()
@@ -73,5 +77,25 @@ public class InventoryItemController : MonoBehaviour
         }
         _selectedIcons?.SetActive(false);
         _defaultIcons?.SetActive(true);
+    }
+
+    public void SetNotInUse()
+    {
+        GetComponent<Image>().sprite = _notInUseSpriteNotSelected;
+        GetComponent<Selectable>().spriteState = new SpriteState()
+        {
+            selectedSprite = _notInUseSpriteSelected
+        };
+        _isInUse = false;
+    }
+
+    public void SetInUse()
+    {
+        GetComponent<Image>().sprite = _inUseSpriteNotSelected;
+        GetComponent<Selectable>().spriteState = new SpriteState()
+        {
+            selectedSprite = _inUseSpriteSelected
+        };
+        _isInUse = true;
     }
 }

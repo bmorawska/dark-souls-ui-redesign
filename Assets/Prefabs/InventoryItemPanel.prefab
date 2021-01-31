@@ -630,6 +630,14 @@ MonoBehaviour:
   _descriptionText: {fileID: 4226484005130748507}
   _defaultIcons: {fileID: 4848790381862074198}
   _selectedIcons: {fileID: 4848790381862074198}
+  _inUseSpriteSelected: {fileID: 21300000, guid: be662a5b8b659ce41bc96f0ae731337d,
+    type: 3}
+  _inUseSpriteNotSelected: {fileID: 21300000, guid: 33d88fc67b0d67a40bf50925b2e79802,
+    type: 3}
+  _notInUseSpriteSelected: {fileID: 21300000, guid: 6a5e66af5157f1341b01e323b532304c,
+    type: 3}
+  _notInUseSpriteNotSelected: {fileID: 21300000, guid: 6a57970a23493784eb85acde70db400d,
+    type: 3}
 --- !u!114 &1736042904
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SortButtonController : MonoBehaviour
 {
+    [SerializeField] private Sprite _ascendSprite;
+    [SerializeField] private Sprite _descendSprite;
+    [SerializeField] private Image _sortOrderImage;
     public void SetSortingOnWeaponCategory(int sortingID)
     {
         switch (sortingID)
@@ -71,5 +75,9 @@ public class SortButtonController : MonoBehaviour
     {
         CategoryController.CurrentCategory.CategoryPanel.SortDirection *= -1;
         CategoryController.CurrentCategory.CategoryPanel.SortItems();
+        _sortOrderImage.sprite = 
+            CategoryController.CurrentCategory.CategoryPanel.SortDirection > 0
+            ? _ascendSprite
+            : _descendSprite;
     }
 }

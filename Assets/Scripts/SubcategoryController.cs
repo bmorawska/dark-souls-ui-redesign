@@ -9,7 +9,8 @@ using UnityEngine.UI;
 public class SubcategoryController : MonoBehaviour
 {
     public static SubcategoryController _activeCategory = null;
-
+    [SerializeField] private string _description;
+    [SerializeField] private TextMeshProUGUI _descritpionText;
     [SerializeField] private CategoryPanelController _parent;
     //[SerializeField] private WeaponCategory _category;
     [SerializeField] private CategoryPanelController _categoryPanel;
@@ -58,6 +59,7 @@ public class SubcategoryController : MonoBehaviour
         _rectTransform.sizeDelta = Vector2.one * 110;
         _image.sprite = SelectedCategorySprite;
         transform.SetAsLastSibling();
+        _descritpionText.text = _description;
     }
 
     public void HideCategory()

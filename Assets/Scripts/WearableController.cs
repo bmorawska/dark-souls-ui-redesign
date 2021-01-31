@@ -10,7 +10,9 @@ public class WearableController : MonoBehaviour
 
     [SerializeField] private Category _category;
     [SerializeField] private Image _itemIcon;
-    public Item item;
+    [SerializeField] private Sprite _blankSprite;
+    public Item item = null;
+    public InventoryItemController uiItem = null;
     public void SelectSlot()
     {
         ChangingItem = this;
@@ -30,7 +32,7 @@ public class WearableController : MonoBehaviour
         }
     }
 
-    public void SetItem(Item newItem)
+    public void SetItem(Item newItem, InventoryItemController newUiItem)
     {
         item = newItem;
         Sprite sprite = newItem.icon;
@@ -45,6 +47,19 @@ public class WearableController : MonoBehaviour
         _itemIcon.sprite = sprite;
         GetComponent<Selectable>().Select();
         ChangingItem = null;
+        FindObjectOfType<WeightBarController>().UpdateBar();
+        if (uiItem != null)
+            uiItem.SetNotInUse();
+        uiItem = newUiItem;
+        newUiItem.SetInUse();
+    }
+
+    public void ClearItem()
+    {
+        uiItem?.SetNotInUse();
+        _itemIcon.sprite = _blankSprite;
+        item = null;
+        uiItem = null;
         FindObjectOfType<WeightBarController>().UpdateBar();
     }
 }
