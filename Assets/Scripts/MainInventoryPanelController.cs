@@ -64,5 +64,4 @@ public class MainInventoryPanelController : MonoBehaviour
         _defaultCategory.SelectCategory();
         _defaultSelection.Select();
     }
-
 }
