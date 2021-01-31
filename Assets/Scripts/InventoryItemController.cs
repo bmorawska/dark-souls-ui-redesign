@@ -16,6 +16,10 @@ public class InventoryItemController : MonoBehaviour
     [SerializeField] private Image _itemIcon;
     [SerializeField] private GameObject _countBackground;
     [SerializeField] private TextMeshProUGUI _countText;
+    [SerializeField] private TextMeshProUGUI _descriptionText = null;
+    [SerializeField] private GameObject _defaultIcons = null;
+    [SerializeField] private GameObject _selectedIcons = null;
+    
     public Item Item { get; set; }
 
     private void Start()
@@ -25,6 +29,8 @@ public class InventoryItemController : MonoBehaviour
             _countBackground.SetActive(false);
         else
             _countText.text = Item.Count.ToString();
+        if (_descriptionText != null)
+            _descriptionText.text = Item.Description;
         //_itemDescriptionObject.text = Item.Description;
         _itemIcon.sprite = Item.icon;
         CategoryItemsAssigment assigment = GetComponent<CategoryItemsAssigment>();
@@ -52,8 +58,11 @@ public class InventoryItemController : MonoBehaviour
     {
         foreach (TextMeshProUGUI text in GetComponentsInChildren<TextMeshProUGUI>())
         {
-            text.color = Color.black;
+            if(text != _countText)
+                text.color = Color.black;
         }
+        _selectedIcons?.SetActive(true);
+        _defaultIcons?.SetActive(false);
     }
 
     public void ChangeChildrenTextColorDefault()
@@ -62,5 +71,7 @@ public class InventoryItemController : MonoBehaviour
         {
             text.color = _defaultColor;
         }
+        _selectedIcons?.SetActive(false);
+        _defaultIcons?.SetActive(true);
     }
 }

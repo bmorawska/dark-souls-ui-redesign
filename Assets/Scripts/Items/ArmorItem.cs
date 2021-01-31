@@ -13,8 +13,9 @@ public enum ArmorCategory
 public class ArmorItem : Item
 {
     public ArmorCategory ArmorCategory;
-    public int Bolt;
-    public int Durability;
-    public int Fire;
-    public int Magic;
+    public int AttackDefence;
+    public int BoltDefence;
+    public int DurabilityDefence;
+    public int FireDefence;
+    public int MagicDefence;
 }

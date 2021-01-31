@@ -22,7 +22,7 @@ public class CategoryPanelController : MonoBehaviour
         _items.Add(item);
     }
 
-    public void ReselectItem()
+    public virtual  void ReselectItem()
     {
         if(LastSelectedItem != null)
             LastSelectedItem.GetComponent<Selectable>().Select();

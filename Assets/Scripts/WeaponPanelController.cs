@@ -64,4 +64,8 @@ public class WeaponPanelController : CategoryPanelController
         _w5.ArrangeItems(_w5._spawnedItems.OrderBy(i => Sorter(i.Item)).ToList());
     }
 
+    public override void ReselectItem()
+    {
+        LastSubcategory.CategoryPanel.ReselectItem();
+    }
 }

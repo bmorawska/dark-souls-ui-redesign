@@ -57,6 +57,7 @@ public class SubcategoryController : MonoBehaviour
             AssignImageComponent();
         _rectTransform.sizeDelta = Vector2.one * 110;
         _image.sprite = SelectedCategorySprite;
+        transform.SetAsLastSibling();
     }
 
     public void HideCategory()

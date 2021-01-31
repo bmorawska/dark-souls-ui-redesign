@@ -22,6 +22,8 @@ public class WearableController : MonoBehaviour
         var myCategory = allCategories.Where(c => c.category == _category).First();
         myCategory.GetComponent<Selectable>().interactable = true;
         myCategory.SelectCategory();
+        myCategory.CategoryPanel.SelectLastSubCategory();
+        myCategory.CategoryPanel.ReselectItem();
         foreach (WearableController wearableController in FindObjectsOfType<WearableController>())
         {
             wearableController.GetComponent<Selectable>().interactable = false;

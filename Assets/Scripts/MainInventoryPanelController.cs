@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class MainInventoryPanelController : MonoBehaviour
@@ -61,7 +62,8 @@ public class MainInventoryPanelController : MonoBehaviour
         }
         
         _defaultCategory.AssignImageComponent();
-        _defaultCategory.SelectCategory();
+        _defaultCategory.GetComponent<EventTrigger>().OnSubmit(null);
+        _defaultCategory.GetComponent<Selectable>().Select();
         _defaultSelection.Select();
     }
 }

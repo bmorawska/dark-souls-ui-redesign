@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ArmorItemsAssigment : MonoBehaviour, CategoryItemsAssigment
 {
+    [SerializeField] private TextMeshProUGUI _attack;
     [SerializeField] private TextMeshProUGUI _bolt;
     [SerializeField] private TextMeshProUGUI _durability;
     [SerializeField] private TextMeshProUGUI _fire;
@@ -13,10 +14,11 @@ public class ArmorItemsAssigment : MonoBehaviour, CategoryItemsAssigment
     public void AssignItem(Item item)
     {
         ArmorItem weaponItem = (ArmorItem) item;
-        _bolt.text = weaponItem.Bolt.ToString();
-        _durability.text = weaponItem.Durability.ToString();
-        _fire.text = weaponItem.Fire.ToString();
-        _magic.text = weaponItem.Magic.ToString();
+        _attack.text = weaponItem.AttackDefence.ToString();
+        _bolt.text = weaponItem.BoltDefence.ToString();
+        _durability.text = weaponItem.DurabilityDefence.ToString();
+        _fire.text = weaponItem.FireDefence.ToString();
+        _magic.text = weaponItem.MagicDefence.ToString();
         _weight.text = weaponItem.Weight.ToString();
     }
 }

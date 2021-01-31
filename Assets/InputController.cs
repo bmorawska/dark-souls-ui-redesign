@@ -40,7 +40,7 @@ public class InputController : MonoBehaviour
                         CategoryController.CurrentCategory.GetComponent<Selectable>().Select();
                     else
                     {
-                        print("Changed subcategory to left");
+                        //print("Changed subcategory to left");
                         previousCategory.SelectCategory();
                         previousCategory.CategoryPanel.ReselectItem();
                     }
@@ -52,7 +52,7 @@ public class InputController : MonoBehaviour
                     var nextCategory = SubcategoryController._activeCategory._nextCategory;
                     if (nextCategory != null)
                     {
-                        print("Changed subcategory to right");
+                        //print("Changed subcategory to right");
                         nextCategory.SelectCategory();
                         nextCategory.CategoryPanel.ReselectItem();
                     }
@@ -68,7 +68,7 @@ public class InputController : MonoBehaviour
                     || Input.GetKeyDown(KeyCode.RightArrow) 
                     || Input.GetKeyDown(KeyCode.Return))
                 {
-                    print("Went to item on right");
+                    //print("Went to item on right");
                     CategoryController.CurrentCategory.CategoryPanel.ReselectItem();
                 }
                 break;
