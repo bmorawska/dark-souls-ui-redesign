@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: bcc42d03d8437004dadb8fe1ece20797, type: 3}
   Category: 1
-  Name: "Tarcza jagie\u0142\u0142y"
-  Description: "Tarcza s\u0142awnego Boga "
+  Name: "Tarcza Jagie\u0142\u0142y"
+  Description: "Tarcza s\u0142awnego kr\xF3la."
   Weight: 2.5
   Count: 1
   WeaponCategory: 2

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4b986837c6a324cb6a739ff7bdfd52, type: 3}
   m_Name: Axe
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 97eb33f17282b874aafc04781652f343, type: 3}
+  icon: {fileID: 21300000, guid: 6a20f4dbf06be284e860c0bf6799923a, type: 3}
   Category: 1
-  Name: Dead axe
-  Description: Axe used by dead man walking
+  Name: "Top\xF3r skazanego"
+  Description: "Nie pos\u0142u\u017Cy\u0142 mu zbyt d\u0142ugo."
   Weight: 5
   Count: 1
   WeaponCategory: 3

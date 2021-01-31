@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 4b5c3887b0bad8548a4414947f05a7ba, type: 3}
   Category: 1
-  Name: "Miecz jagie\u0142\u0142y"
-  Description: "Miecz s\u0142awnego Boga "
+  Name: "Miecz Jagie\u0142\u0142y"
+  Description: "Miecz s\u0142awnego kr\xF3la."
   Weight: 4.5
   Count: 1
   WeaponCategory: 1

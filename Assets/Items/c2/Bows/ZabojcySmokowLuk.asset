@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f4b986837c6a324cb6a739ff7bdfd52, type: 3}
-  m_Name: Bow
+  m_Name: ZabojcySmokowLuk
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: f049b8f6e6c70664abce7e9de8fc5a5c, type: 3}
+  icon: {fileID: 21300000, guid: 06a45f1bdf328144687809f189976d91, type: 3}
   Category: 1
-  Name: "Wyborowy \u0142uk"
-  Description: "\u0141uk u\u017Cywany przez zawodowych strzelc\xF3w."
-  Weight: 2
+  Name: "Wielki \u0142uk zab\xF3jcy smok\xF3w"
+  Description: "Bardzo du\u017Cy, ale smoki te\u017C ma\u0142e nie s\u0105."
+  Weight: 3
   Count: 1
   WeaponCategory: 0
   Attack: 50
   Bolt: 0
-  Durability: 240
+  Durability: 300
   Fire: 0
-  Magic: 0
+  Magic: 50

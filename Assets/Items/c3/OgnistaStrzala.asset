@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c427471e34da6e4495b043e1d52eb3e, type: 3}
-  m_Name: Item3
+  m_Name: OgnistaStrzala
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: e71b553516ead73468e33f15860dbd38, type: 3}
+  icon: {fileID: 21300000, guid: 98f2784bcada5074089c14fe249e0995, type: 3}
   Category: 2
-  Name: This item
-  Description: it is this item
+  Name: "Ognista strza\u0142a"
+  Description: "Lepiej nie dotyka\u0107."
   Weight: 0
-  Count: 0
+  Count: 41

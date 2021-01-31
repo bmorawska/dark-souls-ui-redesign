@@ -15,7 +15,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: da3489a989b315644b2918cb9df15709, type: 3}
   Category: 1
   Name: Miecz templariusza
-  Description: "U\u017Cywana przez wielkich rycerzy zakonu Feniksa"
+  Description: "U\u017Cywany przez wielkich rycerzy zakonu Feniksa."
   Weight: 5
   Count: 1
   WeaponCategory: 1

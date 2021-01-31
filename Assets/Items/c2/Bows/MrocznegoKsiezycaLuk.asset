@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f4b986837c6a324cb6a739ff7bdfd52, type: 3}
-  m_Name: Bow
+  m_Name: MrocznegoKsiezycaLuk
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: f049b8f6e6c70664abce7e9de8fc5a5c, type: 3}
+  icon: {fileID: 21300000, guid: 318e2779d5f401942a84592c55f99989, type: 3}
   Category: 1
-  Name: "Wyborowy \u0142uk"
-  Description: "\u0141uk u\u017Cywany przez zawodowych strzelc\xF3w."
+  Name: "\u0141uk Mrocznego Ksi\u0119\u017Cyca"
+  Description: "Ma w sobie dusz\u0119 Mrocznego S\u0142o\u0144ca. Tak, S\u0142o\u0144ca."
   Weight: 2
   Count: 1
   WeaponCategory: 0
   Attack: 50
   Bolt: 0
-  Durability: 240
+  Durability: 200
   Fire: 0
-  Magic: 0
+  Magic: 100
