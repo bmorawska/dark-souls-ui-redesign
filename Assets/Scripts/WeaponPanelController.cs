@@ -26,19 +26,19 @@ public class WeaponPanelController : CategoryPanelController
         WeaponItem wItem = (WeaponItem) item;
         switch (wItem.WeaponCategory)
         {
-            case WeaponCategory.W1:
+            case WeaponCategory.Strzeleckie:
                 _w1.AddItem(item);
                 break;
-            case WeaponCategory.W2:
+            case WeaponCategory.Miecz:
                 _w2.AddItem(item);
                 break;
-            case WeaponCategory.W3:
+            case WeaponCategory.Tarcza:
                 _w3.AddItem(item);
                 break;
-            case WeaponCategory.W4:
+            case WeaponCategory.Topór:
                 _w4.AddItem(item);
                 break;
-            case WeaponCategory.W5:
+            case WeaponCategory.Włócznia:
                 _w5.AddItem(item);
                 break;
             default:

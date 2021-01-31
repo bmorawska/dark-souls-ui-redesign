@@ -6,6 +6,69 @@ using UnityEngine.UI;
 
 public class DescriptionPanelController : MonoBehaviour
 {
+    public void SetAllValues(WeaponItem weapon, WeaponItem previousWeapon)
+    {
+        SetWeaponName(weapon.name);
+        SetAttackType(weapon.AttackType.ToString());
+        SetWeaponType(weapon.WeaponCategory.ToString());
+        
+        //obrazenia
+        SetObrazeniaFizyczneValue(weapon.Attack);
+        SetObrazeniaMagiczneValue(weapon.Magic);
+        SetObrazeniaOgnisteValue(weapon.Fire);
+        SetObrazeniaBlyskValue(weapon.Bolt);
+        SetObrazeniaKrytyczneValue(weapon.Critical);
+        
+        SetBonusAtakFizyczne(weapon.AttackFromBonus);
+        SetBonusAtakMagiczne(weapon.MagicFromBonus);
+        SetBonusAtakOgniste(weapon.FireFromBonus);
+        SetBonusAtakBlysk(weapon.BoltFromBonus);
+        SetBonusAtakKrytyczne(weapon.CriticalFromBonus);
+        
+        SetComparAtakFizyczne((weapon.Attack + weapon.AttackFromBonus) - previousWeapon.Attack);
+        SetComparAtakMagiczne((weapon.Magic + weapon.MagicFromBonus) - previousWeapon.Magic);
+        SetComparAtakOgniste((weapon.Fire + weapon.FireFromBonus) - previousWeapon.Fire);
+        SetComparAtakBlysk((weapon.Bolt + weapon.BoltFromBonus) - previousWeapon.Bolt);
+        SetComparAtakKrytyczne((weapon.Critical + weapon.CriticalFromBonus) - previousWeapon.Critical);
+        
+        SetBonusStrength(weapon.StrengthBonus, weapon.StrengthBonus - previousWeapon.StrengthBonus);
+        SetBonusAgility(weapon.AgilityBonus, weapon.AgilityBonus - previousWeapon.AgilityBonus);
+        SetBonusIntelligence(weapon.IntelligenceBonus, weapon.IntelligenceBonus - previousWeapon.IntelligenceBonus);
+        SetBonusFaith(weapon.FaithBonus, weapon.FaithBonus - previousWeapon.FaithBonus);
+        
+        
+        
+        //redukcja DUN
+        SetRedukcjaFizyczneValue(weapon.AttackReduction);
+        SetRedukcjaMagiczneValue(weapon.MagicReduction);
+        SetRedukcjaOgnisteValue(weapon.FireReduction);
+        SetRedukcjaBlyskValue(weapon.LightningReduction);
+        SetComparRedukcjaStabilnosc(weapon.Stability);
+        
+        SetComparRedukcjaFizyczne(weapon.AttackReduction - previousWeapon.AttackReduction);
+        SetComparRedukcjaMagiczne(weapon.MagicReduction - previousWeapon.MagicReduction);
+        SetComparRedukcjaOgniste(weapon.FireReduction - previousWeapon.FireReduction);
+        SetComparRedukcjaBlysk(weapon.LightningReduction - previousWeapon.LightningReduction);
+        SetComparRedukcjaStabilnosc(weapon.Stability - previousWeapon.Stability);
+        
+        //wymagania DUN    
+        SetWymagSilaValue(weapon.StrengthRequirement);
+        SetWymagZrecznoscValue(weapon.AgilityRequirement);
+        SetWymagInteligencjaValue(weapon.IntelligenceRequirement);
+        SetWymagWiaraValue(weapon.FaithRequirement);
+        SetWymagWytrzymValue(weapon.Durability);
+        SetWymagUdzwigValue(weapon.Weight);
+        SetComparWymagUdzwig(weapon.Weight - previousWeapon.Weight);
+        
+        
+    }
+    
+    
+    
+    [Space(10)]
+    [Header("Ogolne")]
+    [Space(10)]
+    
     [SerializeField]
     private GameObject WeaponName;
     [SerializeField]
@@ -13,20 +76,25 @@ public class DescriptionPanelController : MonoBehaviour
     [SerializeField]
     private GameObject WeaponType;
 
-    public void SetWeaponName(string name)
+    private void SetWeaponName(string name)
     {
         WeaponName.GetComponent<TextMeshProUGUI>().text = name;
     }
-    public void SetAttackType(string type)
+    private void SetAttackType(string type)
     {
         AttackType.GetComponent<TextMeshProUGUI>().text = "Rodzaj ataku: <u>" + type + "</u>";
     }
-    public void SetWeaponType(string type)
+    private void SetWeaponType(string type)
     {
         WeaponType.GetComponent<TextMeshProUGUI>().text = "Rodzaj broni: <u>" + type + "</u>";
     }
 
     #region atakObrazenia
+    
+    [Space(10)]
+    [Header("Obrazenia")]
+    [Space(10)]
+    
     [SerializeField]
     private GameObject ObrazeniaFizyczneValue;
     [SerializeField]
@@ -38,26 +106,30 @@ public class DescriptionPanelController : MonoBehaviour
     [SerializeField]
     private GameObject ObrazeniaKrytyczneValue;
 
-    public void SetObrazeniaFizyczneValue(int value)
+    private void SetObrazeniaFizyczneValue(int value)
     {
         ObrazeniaFizyczneValue.GetComponent<TextMeshProUGUI>().text = value.ToString();
     }
-    public void SetObrazeniaMagiczneValue(int value)
+    private void SetObrazeniaMagiczneValue(int value)
     {
         ObrazeniaMagiczneValue.GetComponent<TextMeshProUGUI>().text = value.ToString();
     }
-    public void SetObrazeniaOgnisteValue(int value)
+    private void SetObrazeniaOgnisteValue(int value)
     {
         ObrazeniaOgnisteValue.GetComponent<TextMeshProUGUI>().text = value.ToString();
     }
-    public void SetObrazeniaBlyskValue(int value)
+    private void SetObrazeniaBlyskValue(int value)
     {
         ObrazeniaBlyskValue.GetComponent<TextMeshProUGUI>().text = value.ToString();
     }
-    public void SetObrazeniaKrytyczneValue(int value)
+    private void SetObrazeniaKrytyczneValue(int value)
     {
         ObrazeniaKrytyczneValue.GetComponent<TextMeshProUGUI>().text = value.ToString();
     }
+    
+    [Space(10)]
+    [Header("Porownania obrazenia")]
+    [Space(10)]
     
     [SerializeField]
     private GameObject ComparAtakFizyczne;
@@ -70,7 +142,7 @@ public class DescriptionPanelController : MonoBehaviour
     [SerializeField]
     private GameObject ComparAtakKrytyczne;
 
-    public void SetComparAtakFizyczne(int comparedValue)
+    private void SetComparAtakFizyczne(int comparedValue)
     {
         if (comparedValue > 0)
         {
@@ -90,7 +162,7 @@ public class DescriptionPanelController : MonoBehaviour
         }
     }
     
-    public void SetComparAtakMagiczne(int comparedValue)
+    private void SetComparAtakMagiczne(int comparedValue)
     {
         if (comparedValue > 0)
         {
@@ -110,7 +182,7 @@ public class DescriptionPanelController : MonoBehaviour
         }
     }
     
-    public void SetComparAtakOgniste(int comparedValue)
+    private void SetComparAtakOgniste(int comparedValue)
     {
         if (comparedValue > 0)
         {
@@ -130,7 +202,7 @@ public class DescriptionPanelController : MonoBehaviour
         }
     }
     
-    public void SetComparAtakBlysk(int comparedValue)
+    private void SetComparAtakBlysk(int comparedValue)
     {
         if (comparedValue > 0)
         {
@@ -150,7 +222,7 @@ public class DescriptionPanelController : MonoBehaviour
         }
     }
     
-    public void SetComparAtakKrytyczne(int comparedValue)
+    private void SetComparAtakKrytyczne(int comparedValue)
     {
         if (comparedValue > 0)
         {
@@ -170,9 +242,177 @@ public class DescriptionPanelController : MonoBehaviour
         }
     }
     
+    [Space(10)]
+    [Header("Obrazenia bonusy")]
+    [Space(10)]
+    [SerializeField]
+    private GameObject BonusAtakFizyczne;
+    [SerializeField]
+    private GameObject BonusAtakMagiczne;
+    [SerializeField]
+    private GameObject BonusAtakOgniste;
+    [SerializeField]
+    private GameObject BonusAtakBlysk;
+    [SerializeField]
+    private GameObject BonusAtakKrytyczne;
+
+    private void SetBonusAtakFizyczne(int value)
+    {
+        if (value > 0)
+        {
+            BonusAtakFizyczne.SetActive(true);
+            BonusAtakFizyczne.GetComponent<TextMeshProUGUI>().text = "+" + value.ToString();
+        }
+        else if (value < 0)
+        {
+            BonusAtakFizyczne.SetActive(true);
+            BonusAtakFizyczne.GetComponent<TextMeshProUGUI>().text = value.ToString();
+        }
+        else
+        {
+            BonusAtakFizyczne.SetActive(false);
+        }
+    }
+    private void SetBonusAtakMagiczne(int value)
+    {
+        if (value > 0)
+        {
+            BonusAtakMagiczne.SetActive(true);
+            BonusAtakMagiczne.GetComponent<TextMeshProUGUI>().text = "+" + value.ToString();
+        }
+        else if (value < 0)
+        {
+            BonusAtakMagiczne.SetActive(true);
+            BonusAtakMagiczne.GetComponent<TextMeshProUGUI>().text = value.ToString();
+        }
+        else
+        {
+            BonusAtakMagiczne.SetActive(false);
+        }
+    }
+    private void SetBonusAtakOgniste(int value)
+    {
+        if (value > 0)
+        {
+            BonusAtakOgniste.SetActive(true);
+            BonusAtakOgniste.GetComponent<TextMeshProUGUI>().text = "+" + value.ToString();
+        }
+        else if (value < 0)
+        {
+            BonusAtakOgniste.SetActive(true);
+            BonusAtakOgniste.GetComponent<TextMeshProUGUI>().text = value.ToString();
+        }
+        else
+        {
+            BonusAtakOgniste.SetActive(false);
+        }
+    }
+    private void SetBonusAtakBlysk(int value)
+    {
+        if (value > 0)
+        {
+            BonusAtakBlysk.SetActive(true);
+            BonusAtakBlysk.GetComponent<TextMeshProUGUI>().text = "+" + value.ToString();
+        }
+        else if (value < 0)
+        {
+            BonusAtakBlysk.SetActive(true);
+            BonusAtakBlysk.GetComponent<TextMeshProUGUI>().text = value.ToString();
+        }
+        else
+        {
+            BonusAtakBlysk.SetActive(false);
+        }
+    }
+    private void SetBonusAtakKrytyczne(int value)
+    {
+        if (value > 0)
+        {
+            BonusAtakKrytyczne.SetActive(true);
+            BonusAtakKrytyczne.GetComponent<TextMeshProUGUI>().text = "+" + value.ToString();
+        }
+        else if (value < 0)
+        {
+            BonusAtakKrytyczne.SetActive(true);
+            BonusAtakKrytyczne.GetComponent<TextMeshProUGUI>().text = value.ToString();
+        }
+        else
+        {
+            BonusAtakKrytyczne.SetActive(false);
+        }
+    }
+    
+    [Space(10)]
+    [Header("Premie od parametrow")]
+    [Space(10)]
+    [SerializeField]
+    private GameObject BonusStrength;
+    [SerializeField]
+    private GameObject BonusAgility;
+    [SerializeField]
+    private GameObject BonusIntelligence;
+    [SerializeField]
+    private GameObject BonusFaith;
+
+    private void SetBonusStrength(BonusValue value, int comparison)
+    {
+        string valueString = value.ToString();
+        if (value == BonusValue.Default)
+            valueString = "-";
+        if (comparison > 0)
+            BonusStrength.GetComponent<TextMeshProUGUI>().text = "<color = cyan>" + valueString + "</color>";
+        else if(comparison < 0)
+            BonusStrength.GetComponent<TextMeshProUGUI>().text = "<color = red>" + valueString + "</color>";
+        else 
+            BonusStrength.GetComponent<TextMeshProUGUI>().text = valueString;
+    }
+    private void SetBonusAgility(BonusValue value, int comparison)
+    {
+        string valueString = value.ToString();
+        if (value == BonusValue.Default)
+            valueString = "-";
+        if (comparison > 0)
+            BonusAgility.GetComponent<TextMeshProUGUI>().text = "<color = cyan>" + valueString + "</color>";
+        else if(comparison < 0)
+            BonusAgility.GetComponent<TextMeshProUGUI>().text = "<color = red>" + valueString + "</color>";
+        else 
+            BonusAgility.GetComponent<TextMeshProUGUI>().text = valueString;
+    }
+    private void SetBonusIntelligence(BonusValue value, int comparison)
+    {
+        string valueString = value.ToString();
+        if (value == BonusValue.Default)
+            valueString = "-";
+        if (comparison > 0)
+            BonusIntelligence.GetComponent<TextMeshProUGUI>().text = "<color = cyan>" + valueString + "</color>";
+        else if(comparison < 0)
+            BonusIntelligence.GetComponent<TextMeshProUGUI>().text = "<color = red>" + valueString + "</color>";
+        else 
+            BonusIntelligence.GetComponent<TextMeshProUGUI>().text = valueString;
+    }
+    private void SetBonusFaith(BonusValue value, int comparison)
+    {
+        string valueString = value.ToString();
+        if (value == BonusValue.Default)
+            valueString = "-";
+        if (comparison > 0)
+            BonusFaith.GetComponent<TextMeshProUGUI>().text = "<color = cyan>" + valueString + "</color>";
+        else if(comparison < 0)
+            BonusFaith.GetComponent<TextMeshProUGUI>().text = "<color = red>" + valueString + "</color>";
+        else 
+            BonusFaith.GetComponent<TextMeshProUGUI>().text = valueString;
+    }
+    
+    
+    
+    
     #endregion atakObrazenia
 
     #region redukcja
+    
+    [Space(10)]
+    [Header("Redukcja")]
+    [Space(10)]
     [SerializeField]
     private GameObject RedukcjaFizyczneValue;
     [SerializeField]
@@ -184,27 +424,30 @@ public class DescriptionPanelController : MonoBehaviour
     [SerializeField]
     private GameObject RedukcjaStabilnoscValue;
 
-    public void SetRedukcjaFizyczneValue(float value)
+    private void SetRedukcjaFizyczneValue(float value)
     {
         RedukcjaFizyczneValue.GetComponent<TextMeshProUGUI>().text = value.ToString();
     }
-    public void SetRedukcjaMagiczneValue(float value)
+    private void SetRedukcjaMagiczneValue(float value)
     {
         RedukcjaMagiczneValue.GetComponent<TextMeshProUGUI>().text = value.ToString();
     }
-    public void SetRedukcjaOgnisteValue(float value)
+    private void SetRedukcjaOgnisteValue(float value)
     {
         RedukcjaOgnisteValue.GetComponent<TextMeshProUGUI>().text = value.ToString();
     }
-    public void SetRedukcjaBlyskValue(float value)
+    private void SetRedukcjaBlyskValue(float value)
     {
         RedukcjaBlyskValue.GetComponent<TextMeshProUGUI>().text = value.ToString();
     }
-    public void SetRedukcjaStabilnoscValue(int value)
+    private void SetRedukcjaStabilnoscValue(int value)
     {
         RedukcjaStabilnoscValue.GetComponent<TextMeshProUGUI>().text = value.ToString();
     }
     
+    [Space(10)]
+    [Header("Redukcja porownania")]
+    [Space(10)]
     [SerializeField]
     private GameObject ComparRedukcjaFizyczne;
     [SerializeField]
@@ -216,7 +459,7 @@ public class DescriptionPanelController : MonoBehaviour
     [SerializeField]
     private GameObject ComparRedukcjaStabilnosc;
     
-    public void SetComparRedukcjaFizyczne(float comparedValue)
+    private void SetComparRedukcjaFizyczne(float comparedValue)
     {
         if (comparedValue > 0)
         {
@@ -236,7 +479,7 @@ public class DescriptionPanelController : MonoBehaviour
         }
     }
     
-    public void SetComparRedukcjaMagiczne(float comparedValue)
+    private void SetComparRedukcjaMagiczne(float comparedValue)
     {
         if (comparedValue > 0)
         {
@@ -256,7 +499,7 @@ public class DescriptionPanelController : MonoBehaviour
         }
     }
     
-    public void SetComparRedukcjaOgniste(float comparedValue)
+    private void SetComparRedukcjaOgniste(float comparedValue)
     {
         if (comparedValue > 0)
         {
@@ -276,7 +519,7 @@ public class DescriptionPanelController : MonoBehaviour
         }
     }
     
-    public void SetComparRedukcjaBlysk(float comparedValue)
+    private void SetComparRedukcjaBlysk(float comparedValue)
     {
         if (comparedValue > 0)
         {
@@ -296,7 +539,7 @@ public class DescriptionPanelController : MonoBehaviour
         }
     }
     
-    public void SetComparRedukcjaStabilnosc(int comparedValue)
+    private void SetComparRedukcjaStabilnosc(int comparedValue)
     {
         if (comparedValue > 0)
         {
@@ -321,6 +564,10 @@ public class DescriptionPanelController : MonoBehaviour
     #endregion redukcja
     
     #region wymagania
+    
+    [Space(10)]
+    [Header("Wymagania")]
+    [Space(10)]
     [SerializeField]
     private GameObject WymagSilaValue;
     [SerializeField]
@@ -334,35 +581,38 @@ public class DescriptionPanelController : MonoBehaviour
     [SerializeField]
     private GameObject WymagUdzwigValue;
     
-    public void SetWymagSilaValue(int value)
+    private void SetWymagSilaValue(int value)
     {
         WymagSilaValue.GetComponent<TextMeshProUGUI>().text = value.ToString();
     }
-    public void SetWymagZrecznoscValue(int value)
+    private void SetWymagZrecznoscValue(int value)
     {
         WymagZrecznoscValue.GetComponent<TextMeshProUGUI>().text = value.ToString();
     }
-    public void SetWymagInteligencjaValue(int value)
+    private void SetWymagInteligencjaValue(int value)
     {
         WymagInteligencjaValue.GetComponent<TextMeshProUGUI>().text = value.ToString();
     }
-    public void SetWymagWiaraValue(int value)
+    private void SetWymagWiaraValue(int value)
     {
         WymagWiaraValue.GetComponent<TextMeshProUGUI>().text = value.ToString();
     }
-    public void SetWymagWytrzymValue(int value)
+    private void SetWymagWytrzymValue(int value)
     {
-        WymagWytrzymValue.GetComponent<TextMeshProUGUI>().text = value.ToString();
+        WymagWytrzymValue.GetComponent<TextMeshProUGUI>().text = value.ToString() + "/" + value;
     }
-    public void SetWymagUdzwigValue(int value)
+    private void SetWymagUdzwigValue(float value)
     {
         WymagUdzwigValue.GetComponent<TextMeshProUGUI>().text = value.ToString();
     }
     
+    [Space(10)]
+    [Header("Wymagania porownanie")]
+    [Space(10)]
     [SerializeField]
     private GameObject ComparWymagUdzwig;
     
-    public void SetComparWymagUdzwig(int comparedValue)
+    private void SetComparWymagUdzwig(float comparedValue)
     {
         if (comparedValue > 0)
         {

@@ -736,7 +736,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &673945731871010071
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1932,7 +1932,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9218941575620574826
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3435,7 +3435,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: D
+  m_text: '-'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3561,7 +3561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3012942676407366294
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6502,7 +6502,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3097098725392946166
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6935,6 +6935,15 @@ MonoBehaviour:
   ComparAtakOgniste: {fileID: 3474138798868803048}
   ComparAtakBlysk: {fileID: 704936912335133112}
   ComparAtakKrytyczne: {fileID: 1062578449933574498}
+  BonusAtakFizyczne: {fileID: 6642825452479440365}
+  BonusAtakMagiczne: {fileID: 2239356676335173435}
+  BonusAtakOgniste: {fileID: 6609752294899019132}
+  BonusAtakBlysk: {fileID: 3015747220589906355}
+  BonusAtakKrytyczne: {fileID: 7861856930816498563}
+  BonusStrength: {fileID: 3059663706198074290}
+  BonusAgility: {fileID: 8311170900040038139}
+  BonusIntelligence: {fileID: 6267514978078762872}
+  BonusFaith: {fileID: 8866757466050159658}
   RedukcjaFizyczneValue: {fileID: 7068199673873631599}
   RedukcjaMagiczneValue: {fileID: 5174777809609147112}
   RedukcjaOgnisteValue: {fileID: 486949314972185748}
@@ -8007,7 +8016,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5833659680630293627
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8273,7 +8282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4810809639728865138
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9110,7 +9119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7212964040469598509
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9883,7 +9892,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: C
+  m_text: '-'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
