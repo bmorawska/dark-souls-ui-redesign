@@ -8,7 +8,7 @@ public class DescriptionPanelController : MonoBehaviour
 {
     public void SetAllValues(WeaponItem weapon, WeaponItem previousWeapon)
     {
-        SetWeaponName(weapon.name);
+        SetWeaponName(weapon.Name);
         SetAttackType(weapon.AttackType.ToString());
         SetWeaponType(weapon.WeaponCategory.ToString());
         
@@ -148,7 +148,7 @@ public class DescriptionPanelController : MonoBehaviour
         {
             ComparAtakFizyczne.SetActive(true);
             ComparAtakFizyczne.GetComponent<TextMeshProUGUI>().text =
-                "(" + "<color=cyan>+" + comparedValue.ToString() + "</color>" + ")";
+                "(" + "<color=#00ffffff>+" + comparedValue.ToString() + "</color>" + ")";
         }
         else if(comparedValue < 0)
         {
@@ -168,7 +168,7 @@ public class DescriptionPanelController : MonoBehaviour
         {
             ComparAtakMagiczne.SetActive(true);
             ComparAtakMagiczne.GetComponent<TextMeshProUGUI>().text =
-                "(" + "<color=cyan>+" + comparedValue.ToString() + "</color>" + ")";
+                "(" + "<color=#00ffffff>+" + comparedValue.ToString() + "</color>" + ")";
         }
         else if(comparedValue < 0)
         {
@@ -188,7 +188,7 @@ public class DescriptionPanelController : MonoBehaviour
         {
             ComparAtakOgniste.SetActive(true);
             ComparAtakOgniste.GetComponent<TextMeshProUGUI>().text =
-                "(" + "<color=cyan>+" + comparedValue.ToString() + "</color>" + ")";
+                "(" + "<color=#00ffffff>+" + comparedValue.ToString() + "</color>" + ")";
         }
         else if(comparedValue < 0)
         {
@@ -208,7 +208,7 @@ public class DescriptionPanelController : MonoBehaviour
         {
             ComparAtakBlysk.SetActive(true);
             ComparAtakBlysk.GetComponent<TextMeshProUGUI>().text =
-                "(" + "<color=cyan>+" + comparedValue.ToString() + "</color>" + ")";
+                "(" + "<color=#00ffffff>+" + comparedValue.ToString() + "</color>" + ")";
         }
         else if(comparedValue < 0)
         {
@@ -228,7 +228,7 @@ public class DescriptionPanelController : MonoBehaviour
         {
             ComparAtakKrytyczne.SetActive(true);
             ComparAtakKrytyczne.GetComponent<TextMeshProUGUI>().text =
-                "(" + "<color=cyan>+" + comparedValue.ToString() + "</color>" + ")";
+                "(" + "<color=#00ffffff>+" + comparedValue.ToString() + "</color>" + ")";
         }
         else if(comparedValue < 0)
         {
@@ -360,7 +360,7 @@ public class DescriptionPanelController : MonoBehaviour
         if (value == BonusValue.Default)
             valueString = "-";
         if (comparison > 0)
-            BonusStrength.GetComponent<TextMeshProUGUI>().text = "<color = cyan>" + valueString + "</color>";
+            BonusStrength.GetComponent<TextMeshProUGUI>().text = "<color = #00ffffff>" + valueString + "</color>";
         else if(comparison < 0)
             BonusStrength.GetComponent<TextMeshProUGUI>().text = "<color = red>" + valueString + "</color>";
         else 
@@ -372,7 +372,7 @@ public class DescriptionPanelController : MonoBehaviour
         if (value == BonusValue.Default)
             valueString = "-";
         if (comparison > 0)
-            BonusAgility.GetComponent<TextMeshProUGUI>().text = "<color = cyan>" + valueString + "</color>";
+            BonusAgility.GetComponent<TextMeshProUGUI>().text = "<color = #00ffffff>" + valueString + "</color>";
         else if(comparison < 0)
             BonusAgility.GetComponent<TextMeshProUGUI>().text = "<color = red>" + valueString + "</color>";
         else 
@@ -384,7 +384,7 @@ public class DescriptionPanelController : MonoBehaviour
         if (value == BonusValue.Default)
             valueString = "-";
         if (comparison > 0)
-            BonusIntelligence.GetComponent<TextMeshProUGUI>().text = "<color = cyan>" + valueString + "</color>";
+            BonusIntelligence.GetComponent<TextMeshProUGUI>().text = "<color = #00ffffff>" + valueString + "</color>";
         else if(comparison < 0)
             BonusIntelligence.GetComponent<TextMeshProUGUI>().text = "<color = red>" + valueString + "</color>";
         else 
@@ -396,7 +396,7 @@ public class DescriptionPanelController : MonoBehaviour
         if (value == BonusValue.Default)
             valueString = "-";
         if (comparison > 0)
-            BonusFaith.GetComponent<TextMeshProUGUI>().text = "<color = cyan>" + valueString + "</color>";
+            BonusFaith.GetComponent<TextMeshProUGUI>().text = "<color = #00ffffff>" + valueString + "</color>";
         else if(comparison < 0)
             BonusFaith.GetComponent<TextMeshProUGUI>().text = "<color = red>" + valueString + "</color>";
         else 
@@ -465,7 +465,7 @@ public class DescriptionPanelController : MonoBehaviour
         {
             ComparRedukcjaFizyczne.SetActive(true);
             ComparRedukcjaFizyczne.GetComponent<TextMeshProUGUI>().text =
-                "(" + "<color=cyan>+" + comparedValue.ToString() + "</color>" + ")";
+                "(" + "<color=#00ffffff>+" + comparedValue.ToString() + "</color>" + ")";
         }
         else if(comparedValue < 0)
         {
@@ -485,7 +485,7 @@ public class DescriptionPanelController : MonoBehaviour
         {
             ComparRedukcjaMagiczne.SetActive(true);
             ComparRedukcjaMagiczne.GetComponent<TextMeshProUGUI>().text =
-                "(" + "<color=cyan>+" + comparedValue.ToString() + "</color>" + ")";
+                "(" + "<color=#00ffffff>+" + comparedValue.ToString() + "</color>" + ")";
         }
         else if(comparedValue < 0)
         {
@@ -505,7 +505,7 @@ public class DescriptionPanelController : MonoBehaviour
         {
             ComparRedukcjaOgniste.SetActive(true);
             ComparRedukcjaOgniste.GetComponent<TextMeshProUGUI>().text =
-                "(" + "<color=cyan>+" + comparedValue.ToString() + "</color>" + ")";
+                "(" + "<color=#00ffffff>+" + comparedValue.ToString() + "</color>" + ")";
         }
         else if(comparedValue < 0)
         {
@@ -525,7 +525,7 @@ public class DescriptionPanelController : MonoBehaviour
         {
             ComparRedukcjaBlysk.SetActive(true);
             ComparRedukcjaBlysk.GetComponent<TextMeshProUGUI>().text =
-                "(" + "<color=cyan>+" + comparedValue.ToString() + "</color>" + ")";
+                "(" + "<color=#00ffffff>+" + comparedValue.ToString() + "</color>" + ")";
         }
         else if(comparedValue < 0)
         {
@@ -545,7 +545,7 @@ public class DescriptionPanelController : MonoBehaviour
         {
             ComparRedukcjaStabilnosc.SetActive(true);
             ComparRedukcjaStabilnosc.GetComponent<TextMeshProUGUI>().text =
-                "(" + "<color=cyan>+" + comparedValue.ToString() + "</color>" + ")";
+                "(" + "<color=#00ffffff>+" + comparedValue.ToString() + "</color>" + ")";
         }
         else if(comparedValue < 0)
         {
@@ -624,7 +624,7 @@ public class DescriptionPanelController : MonoBehaviour
         {
             ComparWymagUdzwig.SetActive(true);
             ComparWymagUdzwig.GetComponent<TextMeshProUGUI>().text =
-                "(" + "<color=cyan>" + comparedValue.ToString() + "</color>" + ")";
+                "(" + "<color=#00ffffff>" + comparedValue.ToString() + "</color>" + ")";
         }
         else
         {
