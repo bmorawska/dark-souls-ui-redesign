@@ -9,8 +9,8 @@ using UnityEngine.UI;
 public class SubcategoryController : MonoBehaviour
 {
     public static SubcategoryController _activeCategory = null;
-    
 
+    [SerializeField] private CategoryPanelController _parent;
     //[SerializeField] private WeaponCategory _category;
     [SerializeField] private CategoryPanelController _categoryPanel;
     [SerializeField] private Sprite CategorySprite;
@@ -25,7 +25,7 @@ public class SubcategoryController : MonoBehaviour
 
     public SubcategoryController _nextCategory;
     public SubcategoryController _previousCategory;
-
+    private bool _wasAssigned = false;
 
     private void Start()
     {
@@ -40,6 +40,7 @@ public class SubcategoryController : MonoBehaviour
             _image.sprite = CategorySprite;
         else
             CategorySprite = _image.sprite;
+        _wasAssigned = true;
     }
 
     public void SelectCategory()
@@ -51,6 +52,9 @@ public class SubcategoryController : MonoBehaviour
         _categoryPanel.gameObject.SetActive(true);
         //_categoryPanel.ReselectItem();
         //transform.localScale = Vector3.one * 1.3f;
+        _parent.LastSubcategory = this;
+        if(!_wasAssigned)
+            AssignImageComponent();
         _rectTransform.sizeDelta = Vector2.one * 110;
         _image.sprite = SelectedCategorySprite;
     }

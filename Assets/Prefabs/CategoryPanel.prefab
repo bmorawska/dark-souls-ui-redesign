@@ -536,6 +536,7 @@ GameObject:
   - component: {fileID: 1315182224237014746}
   - component: {fileID: 6640458282054160804}
   - component: {fileID: 8077581910336634814}
+  - component: {fileID: 8387981490876744572}
   m_Layer: 5
   m_Name: CategoryPanel
   m_TagString: Untagged
@@ -644,10 +645,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 224ebc76c3e52bf4982a57253ed41f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
+  _spawnedItems: []
   _inventoryItemPrefab: {fileID: 6725204460250164149, guid: d9dbda7a203ecd441a5829dacf7ed5cc,
     type: 3}
   _content: {fileID: 7762535037371398762}
+  LastSelectedItem: {fileID: 0}
+--- !u!114 &8387981490876744572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7638647038666945199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5831c0be9868ff64da1e0602fec899f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _categoryPanel: {fileID: 0}
+  CategorySprite: {fileID: 0}
+  SelectedCategorySprite: {fileID: 0}
+  category: 2
+  _nextCategory: {fileID: 0}
+  _previousCategory: {fileID: 0}
 --- !u!1 &8927381210675726217
 GameObject:
   m_ObjectHideFlags: 0

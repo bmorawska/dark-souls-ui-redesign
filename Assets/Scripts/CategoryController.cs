@@ -24,6 +24,7 @@ public class CategoryController : MonoBehaviour
 
     [SerializeField] private Category _category;
     [SerializeField] private CategoryPanelController _categoryPanel;
+    //[SerializeField] private SubcategoryController _defaultSubcategory;
     [SerializeField] private Sprite CategorySprite;
     [SerializeField] private Sprite SelectedCategorySprite;
     public CategoryController CategoryUppon;
@@ -52,9 +53,12 @@ public class CategoryController : MonoBehaviour
     {
         _currentCategory?.HideCategory();
         _categoryPanel.gameObject.SetActive(true);
+        _categoryPanel.SelectLastSubCategory();
         transform.localScale = Vector3.one * 1.3f;
         _image.sprite = SelectedCategorySprite;
         _currentCategory = this;
+        // _defaultSubcategory.AssignImageComponent();
+        // _defaultSubcategory.SelectCategory();
         //_categoryPanel.ReselectItem();
         IsActive = true;
     }

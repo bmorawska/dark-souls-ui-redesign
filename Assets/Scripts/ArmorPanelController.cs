@@ -7,7 +7,6 @@ using UnityEngine;
 public class ArmorPanelController : CategoryPanelController
 {
     //delegate float Sorter(WeaponItem item);
-
     [SerializeField] private CategoryPanelController _w1;
     [SerializeField] private CategoryPanelController _w2;
     [SerializeField] private CategoryPanelController _w3;

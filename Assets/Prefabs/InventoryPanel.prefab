@@ -265,6 +265,7 @@ MonoBehaviour:
   CategorySprite: {fileID: 0}
   SelectedCategorySprite: {fileID: 21300000, guid: ac343f0f633de444b99fc81ac5136a6e,
     type: 3}
+  category: 0
   _nextCategory: {fileID: 3006164423589550135}
   _previousCategory: {fileID: 6290479142133336852}
 --- !u!1 &196298578286479097
@@ -657,6 +658,7 @@ MonoBehaviour:
   CategorySprite: {fileID: 0}
   SelectedCategorySprite: {fileID: 21300000, guid: b30ea93f24867154691da27d5c7f1668,
     type: 3}
+  category: 0
   _nextCategory: {fileID: 0}
   _previousCategory: {fileID: 6566156042602772220}
 --- !u!1 &634626202407917751
@@ -1472,6 +1474,7 @@ MonoBehaviour:
   CategorySprite: {fileID: 0}
   SelectedCategorySprite: {fileID: 21300000, guid: 0b538312b7dc1f444962db06673d5162,
     type: 3}
+  category: 0
   _nextCategory: {fileID: 4369016215240752829}
   _previousCategory: {fileID: 0}
 --- !u!1 &1073351296997378630
@@ -2222,6 +2225,7 @@ MonoBehaviour:
   CategorySprite: {fileID: 0}
   SelectedCategorySprite: {fileID: 21300000, guid: 0b538312b7dc1f444962db06673d5162,
     type: 3}
+  category: 0
   _nextCategory: {fileID: 6106928227338280419}
   _previousCategory: {fileID: 9147729708844813139}
 --- !u!1 &1889728127419322901
@@ -2506,6 +2510,7 @@ MonoBehaviour:
   CategorySprite: {fileID: 0}
   SelectedCategorySprite: {fileID: 21300000, guid: 0b538312b7dc1f444962db06673d5162,
     type: 3}
+  category: 0
   _nextCategory: {fileID: 7936491921154747539}
   _previousCategory: {fileID: 4369016215240752829}
 --- !u!1 &2105918108219478765
@@ -5160,6 +5165,7 @@ MonoBehaviour:
   CategorySprite: {fileID: 0}
   SelectedCategorySprite: {fileID: 21300000, guid: 0b538312b7dc1f444962db06673d5162,
     type: 3}
+  category: 0
   _nextCategory: {fileID: 0}
   _previousCategory: {fileID: 7936491921154747539}
 --- !u!1 &4831374626509705687
@@ -6498,6 +6504,7 @@ MonoBehaviour:
   CategorySprite: {fileID: 0}
   SelectedCategorySprite: {fileID: 21300000, guid: 91c96ee7da2904c4099b7c3a5c09b3a7,
     type: 3}
+  category: 0
   _nextCategory: {fileID: 6566156042602772220}
   _previousCategory: {fileID: 6732541848278514605}
 --- !u!1 &6387249652543220689
@@ -8272,6 +8279,7 @@ MonoBehaviour:
   CategorySprite: {fileID: 0}
   SelectedCategorySprite: {fileID: 21300000, guid: 0b538312b7dc1f444962db06673d5162,
     type: 3}
+  category: 0
   _nextCategory: {fileID: 4142883078697473498}
   _previousCategory: {fileID: 6106928227338280419}
 --- !u!1 &8500670885226981183
@@ -8785,6 +8793,7 @@ MonoBehaviour:
   CategorySprite: {fileID: 0}
   SelectedCategorySprite: {fileID: 21300000, guid: 9fa8996bc6d0f1241b0a02ae46bafb69,
     type: 3}
+  category: 0
   _nextCategory: {fileID: 6290479142133336852}
   _previousCategory: {fileID: 0}
 --- !u!1 &8990522880823576176
@@ -9424,6 +9433,12 @@ PrefabInstance:
       propertyPath: _categoryPanel
       value: 
       objectReference: {fileID: 3144505069376643568}
+    - target: {fileID: 5658088668004699801, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
+        type: 3}
+      propertyPath: SelectedCategorySprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 872020f0daa0a98419516d0b719c551c,
+        type: 3}
     - target: {fileID: 6214307209666352415, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
         type: 3}
       propertyPath: m_Name
@@ -10350,6 +10365,12 @@ PrefabInstance:
       propertyPath: _categoryPanel
       value: 
       objectReference: {fileID: 8387032917609389589}
+    - target: {fileID: 5658088668004699801, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
+        type: 3}
+      propertyPath: SelectedCategorySprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fcfbb977ec345bc41bc044479d2698f9,
+        type: 3}
     - target: {fileID: 6214307209666352415, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
         type: 3}
       propertyPath: m_Name
@@ -10704,6 +10725,12 @@ PrefabInstance:
       propertyPath: _categoryPanel
       value: 
       objectReference: {fileID: 2840970983864168405}
+    - target: {fileID: 5658088668004699801, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
+        type: 3}
+      propertyPath: SelectedCategorySprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1f5bb0883dd812346ba3b69f1ade46f9,
+        type: 3}
     - target: {fileID: 6214307209666352415, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
         type: 3}
       propertyPath: m_Name
@@ -13233,6 +13260,12 @@ PrefabInstance:
       propertyPath: _categoryPanel
       value: 
       objectReference: {fileID: 1415546555832378903}
+    - target: {fileID: 5658088668004699801, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
+        type: 3}
+      propertyPath: SelectedCategorySprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4f97608e16085534f8ea0e7d768f0441,
+        type: 3}
     - target: {fileID: 6214307209666352415, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
         type: 3}
       propertyPath: m_Name
@@ -13797,6 +13830,12 @@ PrefabInstance:
       propertyPath: _categoryPanel
       value: 
       objectReference: {fileID: 6094990215118950738}
+    - target: {fileID: 5658088668004699801, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
+        type: 3}
+      propertyPath: SelectedCategorySprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86c2bab4d717cf0448820ab689050728,
+        type: 3}
     - target: {fileID: 6214307209666352415, guid: 238c5fe025f525a41bf3e0ef2c7d7f18,
         type: 3}
       propertyPath: m_Name

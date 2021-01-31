@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class CategoryPanelController : MonoBehaviour
 {
+    public SubcategoryController LastSubcategory;
     public Func<Item, float> Sorter;
     private List<Item> _items = new List<Item>();
     public List<InventoryItemController> _spawnedItems;
@@ -61,5 +62,10 @@ public class CategoryPanelController : MonoBehaviour
         {
             items[i].transform.localPosition = new Vector3(0, (i) * _itemPanelHeight * -1, 0);
         }
+    }
+
+    public void SelectLastSubCategory()
+    {
+        LastSubcategory?.SelectCategory();
     }
 }

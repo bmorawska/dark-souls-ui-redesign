@@ -7,7 +7,6 @@ using UnityEngine;
 public class WeaponPanelController : CategoryPanelController
 {
     //delegate float Sorter(WeaponItem item);
-
     [SerializeField] private CategoryPanelController _w1;
     [SerializeField] private CategoryPanelController _w2;
     [SerializeField] private CategoryPanelController _w3;
@@ -64,4 +63,5 @@ public class WeaponPanelController : CategoryPanelController
         _w4.ArrangeItems(_w4._spawnedItems.OrderBy(i => Sorter(i.Item)).ToList());
         _w5.ArrangeItems(_w5._spawnedItems.OrderBy(i => Sorter(i.Item)).ToList());
     }
+
 }
