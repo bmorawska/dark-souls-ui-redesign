@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class OneScriptToRuleThemAll : MonoBehaviour
 {
+    public void GenerateItems()
+    {
+        FindObjectOfType<MainInventoryPanelController>().GenerateItems();
+    }
     public void SetAllScrollsValues()
     {
         foreach (ScrollRect scrollRect in FindObjectsOfType<ScrollRect>())

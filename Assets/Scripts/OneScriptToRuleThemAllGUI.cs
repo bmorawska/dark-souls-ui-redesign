@@ -14,6 +14,7 @@ public class OneScriptToRuleThemAllGUI : Editor
             OneScriptToRuleThemAll script = (OneScriptToRuleThemAll) target;
             //script.SetAllScrollsValues();
             //script.AddSelectableAddonComponent();
+            script.GenerateItems();
         }
     }
 }

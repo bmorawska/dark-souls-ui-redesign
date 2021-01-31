@@ -11,7 +11,7 @@ public class CategoryPanelController : MonoBehaviour
     public SubcategoryController LastSubcategory;
     public Func<Item, int, float> Sorter;
     public int SortDirection = 1;
-    private List<Item> _items = new List<Item>();
+    private List<Item> _items;
     public List<InventoryItemController> _spawnedItems;
     private float _itemPanelHeight;
     [SerializeField] private GameObject _inventoryItemPrefab;
