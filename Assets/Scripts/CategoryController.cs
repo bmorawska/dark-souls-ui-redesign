@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public enum Category
 {
-    C1,
+    Armor,
     Weapons,
     C3,
     C4, 
@@ -28,7 +28,7 @@ public class CategoryController : MonoBehaviour
     [SerializeField] private Sprite SelectedCategorySprite;
     public CategoryController CategoryUppon;
     public CategoryController CategoryBelow;
-    public bool IsActive { get; protected set; } = false;
+    public bool IsActive = false;// { get; protected set; } = false;
 
     public CategoryPanelController CategoryPanel => _categoryPanel;
 

@@ -21,10 +21,6 @@ public class MainInventoryPanelController : MonoBehaviour
     [SerializeField] private List<Item> _c8Items;
     void Start()
     {
-        _defaultCategory.AssignImageComponent();
-        _defaultCategory.SelectCategory();
-        _defaultSelection.Select();
-        
         // _c1Items.ForEach(i => i.Category = Category.C1);
         // _c2Items.ForEach(i => i.Category = Category.C2);
         // _c3Items.ForEach(i => i.Category = Category.C3);
@@ -63,6 +59,10 @@ public class MainInventoryPanelController : MonoBehaviour
                 categoryPanel.GenerateItems();
             }
         }
+        
+        _defaultCategory.AssignImageComponent();
+        _defaultCategory.SelectCategory();
+        _defaultSelection.Select();
     }
 
 }

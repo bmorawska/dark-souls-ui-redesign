@@ -44,7 +44,6 @@ public class CategoryPanelController : MonoBehaviour
             _spawnedItems.Add(ic);
         }
 
-        print(gameObject.name);
         var rectTransform = _content.GetComponent<RectTransform>();
         rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x,
             _itemPanelHeight * (_spawnedItems.Count == 0 ? 1 : _spawnedItems.Count));
