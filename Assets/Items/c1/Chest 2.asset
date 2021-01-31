@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea03e58aa672d974b935addce45d46e2, type: 3}
   m_Name: Chest 2
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: e49632776de7f0a4482a78059933c8ed, type: 3}
+  icon: {fileID: 21300000, guid: 15e2350a0278c6a468212220b8fcf797, type: 3}
   Category: 0
   Name: Bluza magiczna
   Description: "Nie tylko chroni, ale te\u017C wygl\u0105da."
   Weight: 3
   Count: 3
   ArmorCategory: 1
-  Bolt: 0
-  Durability: 120
-  Fire: 0
-  Magic: 100
+  AttackDefence: 10
+  BoltDefence: 0
+  DurabilityDefence: 100
+  FireDefence: 0
+  MagicDefence: 50

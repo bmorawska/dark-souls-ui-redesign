@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea03e58aa672d974b935addce45d46e2, type: 3}
-  m_Name: Glow 1
+  m_Name: Helmet 3
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 77e72f300b1422043a4cad5160db9b74, type: 3}
+  icon: {fileID: 21300000, guid: 51a146200b65f484f98cd2497090bea7, type: 3}
   Category: 0
-  Name: "Ksi\u0119\u017Cycowe r\u0119kawiczki"
-  Description: "Dla lepszej widoczno\u015Bci noc\u0105,"
-  Weight: 2
-  Count: 1
-  ArmorCategory: 2
-  AttackDefence: 10
-  BoltDefence: 5
-  DurabilityDefence: 100
-  FireDefence: 1
-  MagicDefence: 20
+  Name: Kapelusz
+  Description: "Kiedy styl wygrywa z rozs\u0105dkiem."
+  Weight: 0.5
+  Count: 2
+  ArmorCategory: 0
+  AttackDefence: 1
+  BoltDefence: 0
+  DurabilityDefence: 112
+  FireDefence: 0
+  MagicDefence: 0

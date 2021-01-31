@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea03e58aa672d974b935addce45d46e2, type: 3}
   m_Name: Chest
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 3f7035d4263aa1a4b968754d4753d5b5, type: 3}
+  icon: {fileID: 21300000, guid: 099ca6931da1e3a4c8410f676b541796, type: 3}
   Category: 0
   Name: Bluza
   Description: "S\u0142abo, ale gorzej nie b\u0119dzie."
   Weight: 3
   Count: 0
   ArmorCategory: 1
-  Bolt: 0
-  Durability: 120
-  Fire: 0
-  Magic: 0
+  AttackDefence: 10
+  BoltDefence: 0
+  DurabilityDefence: 50
+  FireDefence: 0
+  MagicDefence: 0

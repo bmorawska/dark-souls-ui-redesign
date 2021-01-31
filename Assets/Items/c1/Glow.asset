@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea03e58aa672d974b935addce45d46e2, type: 3}
   m_Name: Glow
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 1c467e4d8975db74d93c99737e38c07f, type: 3}
+  icon: {fileID: 21300000, guid: 0a55ba86b6edfa547a1d4c868bf199a4, type: 3}
   Category: 0
   Name: "Magiczne r\u0119kawiczki"
   Description: "Mo\u017Ce nale\u017Ca\u0142y kiedy\u015B do maga?"
   Weight: 1
   Count: 1
   ArmorCategory: 2
-  Bolt: 0
-  Durability: 110
-  Fire: 0
-  Magic: 50
+  AttackDefence: 5
+  BoltDefence: 0
+  DurabilityDefence: 200
+  FireDefence: 0
+  MagicDefence: 20
