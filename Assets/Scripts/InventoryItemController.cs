@@ -29,6 +29,13 @@ public class InventoryItemController : MonoBehaviour
 
     private void Start()
     {
+        Selectable s = GetComponent<Selectable>();
+        Sprite chosenSprite = s.spriteState.selectedSprite;
+        s.spriteState = new SpriteState()
+        {
+            selectedSprite = chosenSprite,
+            pressedSprite = chosenSprite
+        };
     }
 
     public void AssignUI()
@@ -89,7 +96,8 @@ public class InventoryItemController : MonoBehaviour
         GetComponent<Image>().sprite = _notInUseSpriteNotSelected;
         GetComponent<Selectable>().spriteState = new SpriteState()
         {
-            selectedSprite = _notInUseSpriteSelected
+            selectedSprite = _notInUseSpriteSelected,
+            pressedSprite = _notInUseSpriteSelected
         };
         _isInUse = false;
     }
@@ -99,7 +107,8 @@ public class InventoryItemController : MonoBehaviour
         GetComponent<Image>().sprite = _inUseSpriteNotSelected;
         GetComponent<Selectable>().spriteState = new SpriteState()
         {
-            selectedSprite = _inUseSpriteSelected
+            selectedSprite = _inUseSpriteSelected,
+            pressedSprite = _inUseSpriteSelected
         };
         _isInUse = true;
     }

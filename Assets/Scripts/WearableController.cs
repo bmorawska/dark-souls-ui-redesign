@@ -44,6 +44,7 @@ public class WearableController : MonoBehaviour
         }
         var selectable = GetComponent<Selectable>();
         selectable.interactable = true;
+        transform.parent.GetComponent<WearablePanelController>().ChangeToSelected();
     }
 
     public void SetItem(Item newItem, InventoryItemController newUiItem)
@@ -74,6 +75,7 @@ public class WearableController : MonoBehaviour
             newUiItem.visualization.SetActive(true);
         //_defaultSprite = image.sprite;
         _image.sprite = _defaultSprite;
+        transform.parent.GetComponent<WearablePanelController>().ChangeToNotSelected();
     }
 
     public void ClearItem()
