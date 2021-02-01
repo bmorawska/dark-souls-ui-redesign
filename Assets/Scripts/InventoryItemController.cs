@@ -25,6 +25,7 @@ public class InventoryItemController : MonoBehaviour
     [SerializeField] private Sprite _notInUseSpriteNotSelected;
     private bool _isInUse = false;
     [SerializeField] public Item Item;// { get; set; }
+    [SerializeField] public GameObject visualization = null;
 
     private void Start()
     {

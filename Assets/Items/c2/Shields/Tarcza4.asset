@@ -17,7 +17,7 @@ MonoBehaviour:
   Name: Tarcza wikinga
   Description: "Niby skrytozab\xF3jcy a jak przychodz\u0105 tr\u0105bi\u0105 na ca\u0142e
     miasto."
-  Weight: 2.5
+  Weight: 4
   Count: 1
   WeaponCategory: 2
   AttackType: 0

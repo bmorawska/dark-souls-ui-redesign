@@ -63,16 +63,27 @@ public class WearableController : MonoBehaviour
         ChangingItem = null;
         FindObjectOfType<WeightBarController>().UpdateBar();
         if (uiItem != null)
+        {
+            if(uiItem.visualization ?? false)
+                uiItem.visualization.SetActive(false);
             uiItem.SetNotInUse();
+        }
         uiItem = newUiItem;
         newUiItem.SetInUse();
+        if(newUiItem.visualization ?? false)
+            newUiItem.visualization.SetActive(true);
         //_defaultSprite = image.sprite;
         _image.sprite = _defaultSprite;
     }
 
     public void ClearItem()
     {
-        uiItem?.SetNotInUse();
+        if (uiItem != null)
+        {
+            uiItem.SetNotInUse();
+            if(uiItem.visualization ?? false)
+                uiItem.visualization.SetActive(false);
+        }
         _itemIcon.sprite = _blankSprite;
         item = null;
         uiItem = null;

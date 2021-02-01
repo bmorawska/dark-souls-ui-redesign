@@ -18,6 +18,14 @@ public class CategoryPanelController : MonoBehaviour
     [SerializeField] private Transform _content;
     public GameObject LastSelectedItem = null;
 
+    private void Start()
+    {
+        _spawnedItems = _content.GetComponentsInChildren<InventoryItemController>().ToList();//.Cast<Transform>().ToList()
+            //.Select(t => t.GetComponent<InventoryItemController>()).ToList();
+        //print(name + " have " + _spawnedItems.Count + " children");
+        _itemPanelHeight = _inventoryItemPrefab.GetComponent<RectTransform>().rect.height;
+    }
+
     public virtual void AddItem(Item item)
     {
         _items.Add(item);
@@ -54,6 +62,7 @@ public class CategoryPanelController : MonoBehaviour
 
     public virtual void SortItems()
     {
+        //print(name + " have " + _spawnedItems.Count + " children");
         if(_spawnedItems.Count == 0) return;
         ArrangeItems(_spawnedItems.OrderBy(i => Sorter(i.Item, SortDirection)).ToList());
     }

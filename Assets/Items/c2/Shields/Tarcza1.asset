@@ -16,7 +16,7 @@ MonoBehaviour:
   Category: 1
   Name: "Tarcza Jagie\u0142\u0142y"
   Description: "Tarcza s\u0142awnego kr\xF3la."
-  Weight: 2.5
+  Weight: 6
   Count: 1
   WeaponCategory: 2
   AttackType: 0

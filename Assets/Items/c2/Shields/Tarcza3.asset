@@ -16,7 +16,7 @@ MonoBehaviour:
   Category: 1
   Name: Tarcza templariusza
   Description: "U\u017Cywana przez wielkich rycerzy zakonu S\u0142o\u0144ca."
-  Weight: 2.5
+  Weight: 3
   Count: 1
   WeaponCategory: 2
   AttackType: 0
