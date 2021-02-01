@@ -11,8 +11,8 @@ public class CategoryPanelController : MonoBehaviour
     public SubcategoryController LastSubcategory;
     public Func<Item, int, float> Sorter;
     public int SortDirection = 1;
-    private List<Item> _items;
-    public List<InventoryItemController> _spawnedItems;
+    [SerializeField] private List<Item> _items;
+    [SerializeField] public List<InventoryItemController> _spawnedItems;
     private float _itemPanelHeight;
     [SerializeField] private GameObject _inventoryItemPrefab;
     [SerializeField] private Transform _content;
@@ -32,7 +32,7 @@ public class CategoryPanelController : MonoBehaviour
     }
     public virtual void GenerateItems()
     {
-        _spawnedItems = new List<InventoryItemController>();
+        //_spawnedItems = new List<InventoryItemController>();
         _itemPanelHeight = _inventoryItemPrefab.GetComponent<RectTransform>().rect.height;
         for (var i = 0; i < _items.Count; i++)
         {
@@ -43,6 +43,7 @@ public class CategoryPanelController : MonoBehaviour
             InventoryItemController ic = inventoryItem.GetComponent<InventoryItemController>();
             ic.Item = item;
             ic._parentPanel = this;
+            ic.AssignUI();
             _spawnedItems.Add(ic);
         }
 

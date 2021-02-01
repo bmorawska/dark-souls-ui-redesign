@@ -24,9 +24,13 @@ public class InventoryItemController : MonoBehaviour
     [SerializeField] private Sprite _notInUseSpriteSelected;
     [SerializeField] private Sprite _notInUseSpriteNotSelected;
     private bool _isInUse = false;
-    public Item Item { get; set; }
+    [SerializeField] public Item Item;// { get; set; }
 
     private void Start()
+    {
+    }
+
+    public void AssignUI()
     {
         _itemNameObject.text = Item.Name;
         if (Item.Count == 0 || Item.Count == 1)
