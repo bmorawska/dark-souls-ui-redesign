@@ -1,10 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class OneScriptToRuleThemAll : MonoBehaviour
 {
+    [SerializeField] private Transform _textParent;
+    [SerializeField] private Color _newColor;
+
+    public void SetTextColor()
+    {
+        foreach (TextMeshProUGUI text in _textParent.GetComponentsInChildren<TextMeshProUGUI>())
+        {
+            FixTextMeshColor fix = text.gameObject.AddComponent<FixTextMeshColor>();
+            fix.SetColor(_newColor);
+        }
+    }
     public void GenerateItems()
     {
         FindObjectOfType<MainInventoryPanelController>().GenerateItems();

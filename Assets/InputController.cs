@@ -33,11 +33,19 @@ public class InputController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.I))
         {
-            OpenDescriptionPanel();
+            if(_descriptionPanel.gameObject.activeSelf)
+                _descriptionPanel.gameObject.SetActive(false);
+            else
+                OpenDescriptionPanel();
         }
         if(Input.GetKeyDown(KeyCode.H))
         {
             ClearSelectedWearableItem();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && _descriptionPanel.gameObject.activeSelf)
+        {
+            _descriptionPanel.gameObject.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.Q) && _sortButton.interactable)
