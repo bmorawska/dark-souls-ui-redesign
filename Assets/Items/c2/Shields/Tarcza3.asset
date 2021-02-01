@@ -22,7 +22,7 @@ MonoBehaviour:
   AttackType: 0
   Attack: 92
   Bolt: 0
-  Durability: 200
+  Durability: 20
   Fire: 0
   Magic: 500
   Critical: 0
